@@ -1,0 +1,571 @@
+//--assignment 1.1 md__-:
+
+question 1] When you type a URL into your browser (the client), it sends an HTTP (Hypertext Transfer Protocol) or secured HTTPS request across the internet to find the destination server hosting the websiteIn this request-response cycle, the server processes the incoming request, pulls any required information or user data from a database, and sends back a response containing files like HTML, CSS, and JavaScript.
+question 2] HTTP stands for HyperText Transfer Protocol, and HTTPS stands for HyperText Transfer Protocol Secure. Both are foundational rules (protocols) used by web browsers and servers to communicate and transfer data—like web pages, images, and videos—across the internet.
+question 3] The request-response cycle is the fundamental communication pattern powering the modern web, serving as the foundation for how clients (like web browsers or mobile apps) and servers interac
+question 4] he key difference between a static website and a dynamic website is how they deliver and display content to users. A static website serves pre-built, fixed content that looks exactly the same to every visitor, whereas a dynamic website generates content in real time, changing what it displays based on user interaction, time, or location
+question 5] The Chrome DevTools Network panel is a diagnostic tool used to track, monitor, and debug real-time network traffic between a web browser and a server. When you open Chrome DevTools (by pressing F12 or Ctrl+Shift+I on Windows/Linux, or Cmd+Opt+I on Mac) and click on the Network tab, it begins logging all incoming and outgoing browser requests. Each row in the log represents a distinct asset or document being fetched—such as HTML, CSS stylesheets, JavaScript files, images, or API endpoints (Fetch/XHR). By clicking on an individual request, developers can inspect crucial troubleshooting details including HTTP status codes, request and response headers, sent payloads, and data transmission timing parameters.
+
+
+//--assignment 1.2 md__-:
+
+question 1] Visual Studio Code (VS Code) is your code editor where you will write all your files.
+1. Open your browser and go to the official website: visualstudio.com.
+2. Click the big Download button for your operating system (Windows or Mac).
+3. Open the downloaded file to run the installer:
+	• On Windows: Accept the agreement, click Next, check the box that says "Add 'Open with Code' to Windows Explorer" (it is super helpful), and click Finish.
+	• On Mac: Unzip the downloaded file and drag the Visual Studio Code application icon into your Applications folder.
+
+question 2] Node.js is a runtime environment that lets you run JavaScript on your computer outside of a browser.
+1. Go to the official website: nodejs.org.
+2. Look for the version labeled LTS (Long Term Support)—always pick this one because it is the most stable and reliable version. Click the button to download it.
+3. Open the downloaded installer file. Click Next through the setup wizard, accept the terms, leave all settings at their defaults, and click Install.
+
+question 3] Extensions add extra powers to your code editor to make coding easier.
+1. Open VS Code.
+2. Look at the left sidebar and click on the Extensions icon (it looks like four small squares, with one square floating away).
+3. Install Live Server: In the top search bar, type Live Server. Find the extension made by Ritwick Dey and click the blue Install button.
+4. Install Prettier: Clear the search bar, type Prettier, find Prettier - Code formatter, and click Install. (This tool cleans up your code automatically so it looks neat).
+
+question 4] This folder will keep all your project workspace files organized in one place.
+1. Go to your computer's desktop or your documents folder.
+2. Right-click in an empty space, choose New, and select Folder.
+3. Name the folder exactly: web-development-practice
+4. Now, drag this new folder directly into the empty window of VS Code to open it up as your active workspace.
+
+question 5] These three files form the core foundation of a website: structure, style, and logic.
+1. In VS Code, hover your mouse over the name of your folder in the left sidebar (the Explorer view).
+2. Click the New File icon (it looks like a small sheet of paper with a plus sign).
+3. Type index.html and hit Enter. Inside this file, type ! (an exclamation mark) and press Tab or Enter. This will instantly fill the page with a standard HTML layout.
+4. Click the New File icon again, type style.css, and hit Enter.
+5. Click the New File icon one last time, type script.js, and hit Enter.
+
+question 6] Live Server fires up a local testing environment so you can view changes instantly as you type.
+1. Click on your index.html file in VS Code to open it.
+2. Look down at the very bottom right corner of your VS Code window. You will see a button that says Go Live. Click it.
+3. Your default web browser will automatically open up a new tab displaying your blank HTML webpage. The web address bar will show an address like http://127.0.0.
+
+question 7] This step checks that your computer recognizes Node.js and its package manager (npm).
+1. Inside VS Code, go to the top menu bar and click Terminal -> New Terminal. A small window panel will slide up at the bottom of your screen.
+2. Type node -v and hit Enter. It will print out a version number (like v20.x.x or v22.x.x).
+3. Type npm -v and hit Enter. It will print out another version number (like 10.x.x).
+
+
+/--ASSINGNMENT 1.3 MD__-:
+
+question 1] The terminal allows you to talk directly to your computer using text commands instead of clicking around.
+• On Windows: Press the Windows Key, type PowerShell or Terminal, and hit Enter.
+• On Mac: Press Cmd + Space to open Spotlight, type Terminal, and hit Enter.
+
+question 2] We use the mkdir (make directory) command to generate new folders instantly.
+1. In your open terminal, type the following command and hit Enter:bash
+mkdir web-development-practice
+
+2. Move your terminal's focus inside this new folder using the cd (change directory) command:bash
+cd web-development-practice
+
+question 3] Instead of creating them one by one, you can tell the terminal to make multiple folders all at once by separating their names with spaces.
+1. Run this command in your terminal:bash
+mkdir week-1 week-2 week-3
+
+question 4] To create empty files from the terminal, we use different commands depending on your operating system. We will target the paths directly.
+• If you are on a Mac or Linux terminal:bash
+touch week-1/index.html week-2/index.html week-3/index.html
+
+question 5] To satisfy the practice part of your assignment, run these quick trial commands to show your instructor you know how to manipulate files:
+1. Navigate into a folder: cd week-1 (moves you in). Then type cd .. to go back up to the main folder.
+2. Rename a folder: Let's pretend to rename week-3 to sandbox.
+	• Mac/Linux: mv week-3 sandbox
+	• Windows: Rename-Item week-3 sandbox
+3. Delete a folder: Let's delete that newly renamed sandbox folder. Because it has files inside it, we use a recursive flag to force it to delete completely.
+	• Mac/Linux: rm -rf sandbox
+	• Windows: Remove-Item -Recurse sandbox
+
+question 6] If you installed VS Code correctly with the "Add to PATH" option earlier, you can launch it instantly from the command line.
+1. Make sure your terminal is still inside the main web-development-practice directory.
+2. Type the shortcut command code followed by a . (the dot tells it to open the current folder):bash
+code .
+
+
+
+/--ASSIGNMENT 1.4 MD__:-
+
+question 1] Git tracks all the changes you make to your files over time.
+1. Download Git from the official site: git-scm.com.
+2. Open the installer file and click Next through all the default options. You do not need to change anything.
+3. Once the installation is finished, open your terminal (PowerShell on Windows or Terminal on Mac) and type:bash
+git --version
+
+question 2] You need your terminal to look directly inside your project directory.
+1. Open VS Code and open your web-development-practice folder.
+2. Go to the top menu bar, click Terminal, and select New Terminal.
+3. A terminal window will open at the bottom of VS Code, already inside your project folder path.
+
+question 3] This command initializes a brand new, empty Git repository inside your project.
+1. Type the following command in your terminal and press Enter:bash
+git init
+
+question 4] Git needs to know who is saving the work so your name is attached to your changes.
+1. Set your name by running:bash
+git config --global user.name "Your Name"
+
+2. Set your email address by running:bash
+git config --global user.email "your.email@example.com"
+
+question 5] 1. In VS Code, open your index.html file (or create one if it is blank).
+2. Add a basic title to it, like <h1>My Git Practice Page</h1>.
+3. Check what Git sees by running:bash
+git status
+Use code with caution.
+Your index.html file will be red, meaning it is untracked.
+4. Stage the file to prepare it for saving:bash
+git add index.html
+Use code with caution.
+5. Save the snapshot with a meaningful message:bash
+git commit -m "Initial commit: Set up index.html structure"
+Use code with caution.
+
+Commit #2: Adding style
+
+1. Open your style.css file (or create one) and add a quick background color change:css
+body { background-color: #f4f4f4; }
+
+2. Save your changes in Git by staging and committing:bash
+git add style.css
+git commit -m "Add background color styling to CSS file"
+
+
+Commit #3: Adding functionality
+
+1. Open your script.js file (or create one) and write a small message for the browser console:javascript
+console.log("Git assignment completed!");
+
+/assingment 1.5 --md__-:
+
+
+Ans 1: Create a GitHub account or use an existing one
+
+GitHub is a cloud platform where developers store and share their Git repositories.
+1. Open your browser and go to github.com.
+2. Click Sign up in the top right corner and follow the prompts to create an account, or log in if you already have one.
+
+
+
+Ans 2: Create a new public repository
+
+A remote repository acts as a cloud folder for your project code.
+1. Once logged in, click the "+" icon in the top right corner of the page and select New repository.
+2. Set the configuration details:
+	• Repository name: web-development-practice
+	• Description: Optional (e.g., "My web dev course assignments")
+	• Visibility: Set this strictly to Public (so your instructor can view and grade it).
+3. Do NOT check any boxes for "Add a README file", ".gitignore", or "Choose a license"—keep it completely empty.
+4. Click the green Create repository button.
+
+
+
+Ans 3 & 4: Connect the local repository to the remote repository and upload files
+
+GitHub will load a page showing a set of commands under the heading "…or push an existing repository from the command line".
+1. Open the terminal panel at the bottom of your VS Code project window.
+2. Link your local project folder to your new GitHub cloud folder by running this command (replace the URL with your actual GitHub repository URL):bash
+git remote add origin https://github.com
+
+3. Rename your default local branch to main so it matches GitHub's standard naming convention:bash
+git branch -M main
+
+4. Upload your files to the cloud using the push command:bash
+git push -u origin main
+
+
+Ans 5: Add a new file and push the second commit
+
+Now you will practice making a fresh update locally and syncing it with the cloud version.
+1. In VS Code, create a new file named README.md inside your main folder directory.
+2. Open the file and type a quick summary, like: # Web Development Practice Workspace. Save the file.
+3. Open your terminal and run the staging, saving, and uploading commands sequentially:bash
+git add README.md
+git commit -m "Add project description inside README.md file"
+git push
+
+
+Ans 6: Verify the commit history on GitHub
+
+1. Refresh your browser tab showing your repository page on GitHub.
+2. You will now see all of your files successfully uploaded.
+3. Click on the text that displays a clock icon along with "4 commits" (or 2+ depending on your previous project state).
+4. Check that your chronological list of commit messages is perfectly visible on the cloud screen.
+
+/ assingnment 2.1 md--_:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set the page title to "My First Webpage" -->
+    <title>My First Webpage</title>
+</head>
+<body>
+
+    <!-- Main Heading -->
+    <h1>My Webpage</h1>
+
+    <!-- Subheading 1 -->
+    <h2>Introduction</h2>
+    <p>This is a basic webpage structure.</p>
+
+    <!-- Subheading 2 -->
+    <h2>About Me</h2>
+    <p>Learning how to write clean HTML code.</p>
+
+    <!-- Subheading 3 -->
+    <h2>My Goals</h2>
+    <p>To successfully build and test web pages.</p>
+
+</body>
+</html>
+
+
+//assignment 2.2 md--_:-
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Page</title>
+</head>
+<body>
+
+    <!-- Main Heading with Name -->
+    <h1>John Doe</h1>
+    <hr>
+
+    <!-- About Me Section -->
+    <div>
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate learner currently exploring the basics of web development. <br>
+        I enjoy building simple projects and understanding how the internet works behind the scenes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Education Section -->
+    <div>
+        <h2>Education</h2>
+        <h3>High School Diploma</h3>
+        <p>Graduated from <strong>Greenwood High School</strong> with a focus on computer science basics.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div>
+        <h2>Skills</h2>
+        <p>I have built an elementary understanding of <span style="color: blue;">HTML5 layout rules</span>, basic troubleshooting, and structured data layout.</p>
+        <p>I am also highly motivated to pick up <em>CSS styling</em> and <em>JavaScript logic</em> very soon.</p>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div>
+        <h2>Hobbies</h2>
+        <p>When I am not coding, I love playing <i>chess</i>, reading fiction novels, and hiking outdoors.</p>
+    </div>
+
+    <hr>
+    <h6>Page Created: October 2026</h6>
+
+</body>
+</html>
+
+
+/assingment 2.3 md __;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header-section" class="container">
+        <h1>John Doe</h1>
+        <p>Welcome to my personal portfolio website.</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" class="container">
+        <h2>About Me</h2>
+        <p>I am a web developer learning to build clean and functional websites.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education-section" class="container">
+        <h2>Education</h2>
+        <p class="info-text">Bachelor of Science in Computer Science - University of Learning</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills-section" class="container">
+        <h2>Skills</h2>
+        <!-- Custom data attribute tracking skill level -->
+        <p class="info-text" data-level="intermediate">HTML, CSS, and Basic JavaScript</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-section" class="container">
+        <h2>Contact</h2>
+        <p>Email: john.doe@example.com</p>
+    </div>
+
+</body>
+</html>
+
+//assingment 2.4 md--:
+
+
+1. The Broken HTML File ("Before")
+
+Here is the faulty code containing missing tags, incorrect nesting, and a missing attribute [cite: 9]:
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broken Webpage</title>
+</head>
+<body>
+
+    <h1>Welcome to My Website
+    
+    <div>
+        <p>This paragraph has an <strong>incorrectly nested tag <em>bold and italic text</strong> properly closed?</em></p>
+    </div>
+
+    <div>
+        <!-- Missing the required href attribute -->
+        <a>Click here to visit Google</a>
+    </div>
+
+</body>
+</html>
+
+
+2. Identified Errors
+
+When analyzing this code via browser DevTools or an HTML validator, three major issues stand out [cite: 9]:
+• Missing Closing Tag: The main heading <h1> is never closed, causing subsequent elements to accidentally inherit header properties in some browsers [cite: 9].
+• Incorrect Nesting: Inside the first <div>, the tags overlap incorrectly (<strong><em>...</strong></em>) [cite: 9]. The <em> tag must be closed before the <strong> tag closes [cite: 9].
+• Missing Attribute: The anchor <a> tag is missing its vital href attribute, making it an unclickable text element instead of a working link [cite: 9].
+
+3. The Corrected HTML File ("After")
+
+Here is the clean, validated, and properly indented code with all elements fixed [cite: 9]:
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Webpage</title>
+</head>
+<body>
+
+    <!-- Fixed: Added missing closing h1 tag -->
+    <h1>Welcome to My Website</h1>
+    
+    <div>
+        <!-- Fixed: Corrected nesting order for strong and em tags -->
+        <p>This paragraph has a <strong>properly nested <em>bold and italic text</em> block</strong> now.</p>
+    </div>
+
+    <div>
+        <!-- Fixed: Added missing href attribute -->
+        <a href="https://google.com">Click here to visit Google</a>
+    </div>
+
+</body>
+</html>
+
+
+
+//assingnment 2.5 md--:-
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required page title -->
+    <title>Personal Introduction Webpage</title>
+</head>
+<body>
+
+    <!-- Main Heading -->
+    <h1>Alex Mercer</h1>
+    <p>Welcome to my personal introduction webpage.</p>
+    <hr>
+
+    <!-- About Me Section -->
+    <div>
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate student learning the foundations of software engineering and web design. I enjoy solving problems, writing clean code, and building simple web applications from scratch.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Science in Computer Science</strong></p>
+        <p>State University (Expected Graduation: 2028)</p>
+    </div>
+
+    <!-- Technical Skills Section -->
+    <div>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>HyperText Markup Language (HTML5)</li>
+            <li>Basic Cascading Style Sheets (CSS)</li>
+            <li>Git and Version Control</li>
+            <li>Logic Flow and Troubleshooting</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div>
+        <h2>Hobbies</h2>
+        <p>When I am away from my computer screen, I spend my time reading science fiction novels, playing strategy games like chess, and hiking outdoors.</p>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div>
+        <h2>Contact Information</h2>
+        <p>Email: alex.mercer@example.com</p>
+        <p>GitHub Profile: <a href="https://github.com">://github.com</a></p>
+    </div>
+
+</body>
+</html>
+
+
+//assingnment 3.1 md _-:
+
+
+
+1. Home Page (index.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Website</title>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <h1>Tech Innovations Website</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <!-- External link with security attributes -->
+            <a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia (External)</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Main Introduction -->
+    <main>
+        <h2>Welcome to the Home Page</h2>
+        <p>This is the introduction text for my basic multi-page web layout. Use the navigation links above to explore the different pages.</p>
+    </main>
+
+</body>
+</html>
+
+
+2. About Page (about.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <h1>Tech Innovations Website</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia (External)</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- About Section Content -->
+    <main>
+        <h2>About Us</h2>
+        <p>This page provides background information regarding our projects, goals, and web development learning journey.</p>
+    </main>
+
+</body>
+</html>
+
+
+//assingmnet 3.2md__;:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio - Images Section</title>
+</head>
+<body>
+
+    <h1>Welcome to My Portfolio</h1>
+    <hr>
+
+    <!-- Images Section -->
+    <div>
+        <h2>Gallery & Projects</h2>
+
+        <!-- Image 1: Profile Photo -->
+        <div>
+            <h3>Profile Photo</h3>
+            <img src="images/profile.jpg" alt="A professional headshot of a smiling web developer in an office setting" width="200" height="200">
+        </div>
+
+        <!-- Image 2: First Project Screenshot -->
+        <div>
+            <h3>E-commerce Project</h3>
+            <img src="images/project1.jpg" alt="A screenshot of a responsive e-commerce web application displaying product grid layouts" width="400" height="250">
+        </div>
+
+        <!-- Image 3: Second Project Screenshot -->
+        <div>
+            <h3>Weather Dashboard Application</h3>
+            <img src="images/project2.jpg" alt="A simple user interface demonstrating a 5-day weather forecast with blue weather icons" width="400" height="250">
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+assingmnet 3.3 md_::
+
+
+
+
+
+
+
+
+
+
+
+
