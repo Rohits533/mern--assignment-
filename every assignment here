@@ -1,13 +1,31 @@
 //--assignment 1.1 md__-:
 
+
+
+
+
+
+
 question 1] When you type a URL into your browser (the client), it sends an HTTP (Hypertext Transfer Protocol) or secured HTTPS request across the internet to find the destination server hosting the websiteIn this request-response cycle, the server processes the incoming request, pulls any required information or user data from a database, and sends back a response containing files like HTML, CSS, and JavaScript.
 question 2] HTTP stands for HyperText Transfer Protocol, and HTTPS stands for HyperText Transfer Protocol Secure. Both are foundational rules (protocols) used by web browsers and servers to communicate and transfer data—like web pages, images, and videos—across the internet.
 question 3] The request-response cycle is the fundamental communication pattern powering the modern web, serving as the foundation for how clients (like web browsers or mobile apps) and servers interac
-question 4] he key difference between a static website and a dynamic website is how they deliver and display content to users. A static website serves pre-built, fixed content that looks exactly the same to every visitor, whereas a dynamic website generates content in real time, changing what it displays based on user interaction, time, or location
+question 4] he key difference between a static website and a dynamic website is how they deliver and display content to users. A static website serves pre-built, fixed content that looks exactly the same to every visitor, whereas a dynamic website generates content in real time, changing what it displays based on user interaction, time, or locatio
 question 5] The Chrome DevTools Network panel is a diagnostic tool used to track, monitor, and debug real-time network traffic between a web browser and a server. When you open Chrome DevTools (by pressing F12 or Ctrl+Shift+I on Windows/Linux, or Cmd+Opt+I on Mac) and click on the Network tab, it begins logging all incoming and outgoing browser requests. Each row in the log represents a distinct asset or document being fetched—such as HTML, CSS stylesheets, JavaScript files, images, or API endpoints (Fetch/XHR). By clicking on an individual request, developers can inspect crucial troubleshooting details including HTTP status codes, request and response headers, sent payloads, and data transmission timing parameters.
 
 
+
+
+
+
+
 //--assignment 1.2 md__-:
+
+
+
+
+
+
+
 
 question 1] Visual Studio Code (VS Code) is your code editor where you will write all your files.
 1. Open your browser and go to the official website: visualstudio.com.
@@ -51,7 +69,21 @@ question 7] This step checks that your computer recognizes Node.js and its packa
 3. Type npm -v and hit Enter. It will print out another version number (like 10.x.x).
 
 
+
+
+
+
+
+
 /--ASSINGNMENT 1.3 MD__-:
+
+
+
+
+
+
+
+
 
 question 1] The terminal allows you to talk directly to your computer using text commands instead of clicking around.
 • On Windows: Press the Windows Key, type PowerShell or Terminal, and hit Enter.
@@ -88,7 +120,21 @@ code .
 
 
 
+
+
+
+
+
+
 /--ASSIGNMENT 1.4 MD__:-
+
+
+
+
+
+
+
+
 
 question 1] Git tracks all the changes you make to your files over time.
 1. Download Git from the official site: git-scm.com.
@@ -140,7 +186,23 @@ Commit #3: Adding functionality
 1. Open your script.js file (or create one) and write a small message for the browser console:javascript
 console.log("Git assignment completed!");
 
+
+
+
+
+
+
+
+
 /assingment 1.5 --md__-:
+
+
+
+
+
+
+
+
 
 
 Ans 1: Create a GitHub account or use an existing one
@@ -225,7 +287,26 @@ Ans 6: Verify the commit history on GitHub
 </html>
 
 
+
+
+
+
+
+
+
+
+
 //assignment 2.2 md--_:-
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -274,7 +355,27 @@ Ans 6: Verify the commit history on GitHub
 </html>
 
 
+
+
+
+
+
+
+
+
 /assingment 2.3 md __;
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -317,7 +418,21 @@ Ans 6: Verify the commit history on GitHub
 </body>
 </html>
 
+
+
+
+
+
 //assingment 2.4 md--:
+
+
+
+
+
+
+
+
+
 
 
 1. The Broken HTML File ("Before")
@@ -384,7 +499,32 @@ html
 
 
 
+
+
+
+
+
+
+
+
+
+
 //assingnment 2.5 md--:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -444,7 +584,27 @@ html
 </html>
 
 
+
+
+
+
+
+
+
 //assingnment 3.1 md _-:
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -515,7 +675,25 @@ html
 </html>
 
 
+
+
+
+
+
+
+
 //assingmnet 3.2md__;:
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -556,7 +734,26 @@ html
 </html>
 
 
-assingmnet 3.3 md_::<!DOCTYPE html>
+
+
+
+
+
+
+
+
+assingmnet 3.3 md_::
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -690,6 +887,11 @@ assingmnet 3.3 md_::<!DOCTYPE html>
 
 
 //--assingnment 3.4 md-:
+
+
+
+
+
 
 
 
@@ -867,7 +1069,15 @@ assingmnet 3.3 md_::<!DOCTYPE html>
 
 
 
+
+
+
+
+
 <!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -937,7 +1147,15 @@ assingmnet 3.3 md_::<!DOCTYPE html>
 
 
 
+
+
+
+
 ///----assingnment 4.2 . md---:
+
+
+
+
 
 
 
@@ -1180,7 +1398,15 @@ assingnment 4.3.md:--
 
 
 
+
+
+
 assingmnemt 4.4 md-----:
+
+
+
+
+
 
 
 
@@ -1235,7 +1461,17 @@ assingmnemt 4.4 md-----:
 
 
 
+
+
+
+
+
 assningnment 4.5----md:
+
+
+
+
+
 
 
 
@@ -1505,7 +1741,21 @@ assningnment 4.5----md:
 
 
 
+
+
+
+
+
 assingment 5.1-----.md:
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1684,7 +1934,29 @@ html
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 assingmnment 5.2- -----md:-
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2382,12 +2654,6 @@ html
 </body>
 </html>
 Use code with caution.
-If you want, tell me:
-• Would you like me to add simple CSS styling to visually arrange the form fields cleanly into a card layout?
-• Do you need to include additional fields like gender options (radio buttons) or course selection (dropdown box)?
-• Do you need help adding placeholder text or data formatting hints inside the inputs?
-Let me know how you would like to polish this script for your submission!
-AI can make mistakes, so double-check responses 
 
 name=Assignment-4.2.md Assignment 4.2 — Job Application Form[cite: 17] What to build: A job application form using different input types.[cite: 17] Required fields:
 
@@ -2405,9 +2671,7 @@ Add an example of a disabled field as well.[cite: 17]
 Keep the same name for related options in radio buttons.[cite: 17] Submission: Complete job application form and screenshot.[cite: 17]
 
 
-You sent: 1 tab and said: name=Assignment-4.2.md Assignment 4.2 — Job Application Form[cite: 17] What to build: A job application form using different input types.[cite: 17] Required fields:Full name, email, and phone.[cite: 17]Date input for date of birth.[cite: 17]URL input for portfolio URL.[cite: 17]Radio buttons for gender or preferred shift.[cite: 17]Checkboxes for skills.[cite: 17]Dropdown for qualification or job role.[cite: 17]<textarea> for cover letter.[cite: 17]Submit button.[cite: 17] Rules:Every field must have a label.[cite: 17]Make appropriate fields required.[cite: 17]Add an example of a disabled field as well.[cite: 17]Keep the same name for related options in radio buttons.[cite: 17] Submission: Complete job application form and screenshot.[cite: 17]
 
-Assignment-4.2.md
 name=Assignment-4.2.md Assignment 4.2 — Job Application Form[cite: 17] What to build: A job application form using different input types.[cite: 17] Required fields:Full name, email, and phone.[cite: 17]Date input for date of birth.[cite: 17]URL input for portfolio URL.[cite: 17]Radio buttons for gender or preferred shift.[cite: 17]Checkboxes for skills.[cite: 17]Dropdown for qualification or job role.[cite: 17]<textarea> for cover letter.[cite: 17]Submit button.[cite: 17] Rules:Every field must have a label.[cite: 17]Make appropriate fields required.[cite: 17]Add an example of a disabled field as well.[cite: 17]Keep the same name for related options in radio buttons.[cite: 17] Submission: Complete job application form and screenshot.[cite: 17]
 Here is the basic, clean semantic HTML structure for your job application form. It implements all field rules, includes distinct names for related group values, sets up accessible label controls, and features a clear disabled text block.
 
@@ -2546,9 +2810,40 @@ Use colspan or rowspan where appropriate.[cite: 18]
 Keep table headers meaningful.[cite: 18] Submission: marksheet.html and a screenshot of the complete table.[cite: 18]
 
 
+
+
+
+
+
+
+
+
+
+
+
 You sent: 1 tab and said: name=Assignment-4.3.md Assignment 4.3 — Student Marks Table[cite: 18] What to build: A student marksheet table.[cite: 18] Steps:Add data for at least 5 students and 3 subjects.[cite: 18]Use <table>, <tr>, <th>, and <td> for the table.[cite: 18]Organize the table into <thead>, <tbody>, and <tfoot>.[cite: 18]Give a title to the table using <caption>.[cite: 18]Show total or average marks in the footer.[cite: 18]Use colspan or rowspan where appropriate.[cite: 18]Keep table headers meaningful.[cite: 18] Submission: marksheet.html and a screenshot of the complete table.[cite: 18]
 
 Assignment-4.3.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 name=Assignment-4.3.md Assignment 4.3 — Student Marks Table[cite: 18] What to build: A student marksheet table.[cite: 18] Steps:Add data for at least 5 students and 3 subjects.[cite: 18]Use <table>, <tr>, <th>, and <td> for the table.[cite: 18]Organize the table into <thead>, <tbody>, and <tfoot>.[cite: 18]Give a title to the table using <caption>.[cite: 18]Show total or average marks in the footer.[cite: 18]Use colspan or rowspan where appropriate.[cite: 18]Keep table headers meaningful.[cite: 18] Submission: marksheet.html and a screenshot of the complete table.[cite: 18]
 Here is the clean, basic semantic HTML structure for your student marksheet table. It accurately calculates totals, groups elements by structure (thead, tbody, tfoot), and incorporates colspan inside the table footer as requested.
 
