@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 9.4 - Desktop Landing Page Build</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Semantic Navigation Header -->
+  <header class="app-header">
+    <nav class="navbar-container">
+      <div class="brand-logo">
+        <span class="logo-accent">Apex</span>Flow
+      </div>
+      <ul class="desktop-menu">
+        <li><a href="#features" class="menu-link">Features</a></li>
+        <li><a href="#solutions" class="menu-link">Solutions</a></li>
+        <li><a href="#pricing" class="menu-link">Pricing</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn-text">Sign In</a>
+        <a href="#" class="btn-cta btn-primary">Start Free Trial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Semantic Hero Section -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <span class="badge">Next-Gen Analytics Platform</span>
+          <h1>Centralize your workspace operational tracking metrics.</h1>
+          <p class="hero-lead">
+            Eliminate operational data silos completely. Collect core user interactions, database pipelines, and platform load balancing signals into one single screen interface.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn-cta btn-primary">Get Started Instantly</a>
+            <a href="#" class="btn-cta btn-secondary">Request Live Demo</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <!-- Stand-in graphic representing software desktop architecture dashboard -->
+          <img src="https://picsum.photos" alt="Software operational product metric interface graph dashboard mockups" class="hero-mockup">
+        </div>
+      </div>
+    </section>
+
+    <!-- Semantic Features Section -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Engineered for High-Frequency Scalability</h2>
+        <p>A unified suite built around system speed, accessibility, and architectural optimization</p>
+      </div>
+
+      <!-- Grid layout section for standard corporate presentation cards -->
+      <div class="features-desktop-grid">
+        
+        <!-- Card 1 -->
+        <article class="feature-card">
+          <div class="card-badge bg-blue-tint">Data</div>
+          <h3>Real-time Streaming</h3>
+          <p>Process inbound server telemetry logs immediately without buffering latency cycles.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card">
+          <div class="card-badge bg-green-tint">Security</div>
+          <h3>Encrypted Storage</h3>
+          <p>Enterprise grade cryptography ensures pipeline keys remain fully protected at rest.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card">
+          <div class="card-badge bg-purple-tint">Automation</div>
+          <h3>Smart Alert Webhooks</h3>
+          <p>Automatically distribute incident status updates to your team's chat networks instantly.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="feature-card">
+          <div class="card-badge bg-orange-tint">Insight</div>
+          <h3>Automated Reporting</h3>
+          <p>Receive scheduled digest summaries analyzing system performance trends directly to your inbox.</p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-wrapper">
+      <p>&copy; 2026 ApexFlow Systems Inc. All rights reserved. Initial desktop landing page structural build.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   1. GLOBAL ARCHITECTURE & DESIGN TOKENS (Reference Colors & Typography)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. REUSABLE COMPONENT ELEMENTS (Buttons, Badges)
+   ========================================================================== */
+.btn-cta {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   3. NAVIGATION HEADER BUILD (Uses Flexbox Alignment)
+   ========================================================================== */
+.app-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #f1f5f9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Distinct items spaced apart along the line */
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.logo-accent {
+  color: #2563eb;
+}
+
+.desktop-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.menu-link:hover {
+  color: #2563eb;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-text {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   4. HERO LAYOUT IMPLEMENTATION (Uses Flexbox Side-by-Side System)
+   ========================================================================== */
+.hero-section {
+  padding: 10rem 2rem 6rem 2rem; /* Clearance built in for fixed tracking header */
+  background: radial-gradient(100% 100% at top left, rgba(239, 246, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-lead {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-media {
+  flex: 1;
+}
+
+.hero-mockup {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   5. FEATURES SECTION IMPLEMENTATION (Uses Modern CSS Grid System)
+   ========================================================================== */
+.features-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4.5rem auto;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+/* High-fidelity 4-Column Grid mapping */
+.features-desktop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 even column widths stretched symmetrically */
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+/* Tint assignments matching UI framework palettes */
+.bg-blue-tint { background-color: #e0f2fe; color: #0369a1; }
+.bg-green-tint { background-color: #dcfce7; color: #15803d; }
+.bg-purple-tint { background-color: #f3e8ff; color: #7e22ce; }
+.bg-orange-tint { background-color: #ffedd5; color: #c2410c; }
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   6. FOOTER STYLING
+   ========================================================================== */
+.app-footer {
+  border-top: 1px solid #f1f5f9;
+  background-color: #fafafa;
+  padding: 2.5rem 2rem;
+}
+
+.footer-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
