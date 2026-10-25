@@ -1,0 +1,197 @@
+/* ==========================================
+   DESIGN TOKENS & SYSTEM VARIABLES (:root)
+   ========================================== */
+:root {
+    /* Color Tokens */
+    --primary-color: #3b82f6;      /* Vibrant Blue */
+    --secondary-color: #10b981;    /* Emerald Green */
+    --background-color: #f8fafc;   /* Soft Cool Grey */
+    --text-color: #1e293b;         /* Dark Slate */
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+
+    /* Spacing / Layout Tokens */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+
+    /* Typography / Font Size Tokens */
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2.25rem;
+}
+
+/* ==========================================
+   GLOBAL BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: var(--font-md);
+    line-height: 1.5;
+    padding: var(--spacing-lg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   TYPOGRAPHY COMPONENT STYLES
+   ========================================== */
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+}
+
+.title-xl {
+    font-size: var(--font-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.title-lg {
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.title-md {
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.title-sm {
+    font-size: var(--font-md);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.text-md {
+    font-size: var(--font-md);
+    color: #64748b;
+}
+
+.text-sm {
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-md);
+    color: #475569;
+}
+
+/* ==========================================
+   LAYOUT COMPONENT & CONTAINER STYLES
+   ========================================== */
+.alert-box {
+    background-color: #eff6ff;
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 4px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   BUTTON COMPONENT STYLES
+   ========================================== */
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    
+    /* Using Spacing Design Tokens for Button Padding */
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-sm);
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.4 — CSS Variables & Design Tokens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="title-lg">Design System Showcase</h1>
+        <p class="text-md">Built entirely using reusable CSS custom properties and design tokens.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Theme Controls Info Box -->
+        <div class="alert-box">
+            <h3 class="title-sm">Token Verification Tip</h3>
+            <p class="text-sm">Changing a single variable like <code>--primary-color</code> or <code>--spacing-md</code> in the <code>:root</code> selector updates the branding, sizing, and padding across all elements automatically.</p>
+        </div>
+
+        <!-- Cards Container Grid -->
+        <div class="grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <h2 class="title-md">Primary Action Token</h2>
+                <p class="text-sm">This preview block displays a card using structural spacing tokens. The interactive button below implements the primary accent brand token.</p>
+                <button class="btn btn-primary">Primary Button</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h2 class="title-md">Secondary Style Token</h2>
+                <p class="text-sm">This preview block handles alternative user pathways. The interactive button below demonstrates the secondary configuration token hierarchy.</p>
+                <button class="btn btn-secondary">Secondary Button</button>
+            </div>
+            
+        </div>
+
+    </main>
+
+</body>
+</html>
