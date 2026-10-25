@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport metadata tag is strictly configured to guarantee proper cross-device zoom scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 9.5 - Portfolio Ready Responsive Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Responsive Navigation Header (Uses Flexbox) -->
+  <header class="app-header">
+    <nav class="navbar-container">
+      <div class="brand-logo">
+        <span class="logo-accent">Apex</span>Flow
+      </div>
+
+      <!-- Pure CSS mobile menu toggle mechanism using a hidden checkbox -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+      <label for="menu-toggle" class="hamburger-icon" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation links (Responsive column on mobile, row on desktop) -->
+      <ul class="nav-menu">
+        <li><a href="#home" class="menu-link">Home</a></li>
+        <li><a href="#features" class="menu-link">Features</a></li>
+        <li><a href="#pricing" class="menu-link">Pricing</a></li>
+        <li class="nav-actions-mobile">
+          <a href="#" class="btn-text">Sign In</a>
+          <a href="#" class="btn-cta btn-primary">Start Free Trial</a>
+        </li>
+      </ul>
+
+      <!-- Dedicated Desktop-only Actions panel to avoid overlapping metrics -->
+      <div class="nav-actions-desktop">
+        <a href="#" class="btn-text">Sign In</a>
+        <a href="#" class="btn-cta btn-primary">Start Free Trial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section (Responsive stacking column into side-by-side row setup) -->
+    <section id="home" class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <span class="badge">Next-Gen Analytics Platform</span>
+          <h1>Centralize your workspace operational tracking metrics.</h1>
+          <p class="hero-lead">
+            Eliminate operational data silos completely. Collect core user interactions, database pipelines, and platform load balancing signals into one single screen interface.
+          </p>
+          <div class="hero-actions">
+            <a href="#features" class="btn-cta btn-primary">Get Started Instantly</a>
+            <a href="#" class="btn-cta btn-secondary">Request Live Demo</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://picsum.photos" alt="Software operational product metric interface graph dashboard mockups" class="responsive-img hero-mockup">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section (Responsive CSS Grid layout adapting from 1 to 2 to 4 columns) -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Engineered for High-Frequency Scalability</h2>
+        <p>A unified suite built around system speed, accessibility, and architectural optimization</p>
+      </div>
+
+      <div class="features-responsive-grid">
+        
+        <!-- Card 1 -->
+        <article class="feature-card">
+          <div class="card-badge bg-blue-tint">Data</div>
+          <h3>Real-time Streaming</h3>
+          <p>Process inbound server telemetry logs immediately without buffering latency cycles.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card">
+          <div class="card-badge bg-green-tint">Security</div>
+          <h3>Encrypted Storage</h3>
+          <p>Enterprise grade cryptography ensures pipeline keys remain fully protected at rest.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card">
+          <div class="card-badge bg-purple-tint">Automation</div>
+          <h3>Smart Alert Webhooks</h3>
+          <p>Automatically distribute incident status updates to your team's chat networks instantly.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="feature-card">
+          <div class="card-badge bg-orange-tint">Insight</div>
+          <h3>Automated Reporting</h3>
+          <p>Receive scheduled digest summaries analyzing system performance trends directly to your inbox.</p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Responsive Footer Layout -->
+  <footer id="pricing" class="app-footer">
+    <div class="footer-wrapper">
+      <p>&copy; 2026 ApexFlow Systems Inc. All rights reserved. Portfolio-Ready Mobile-First Product Build.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   1. GLOBAL ARCHITECTURE & DESIGN TOKENS (Mobile-First Defaults)
+   ========================================================================== */
+* {
+  box-sizing: border-box; /* Completely kills side-scrolling overflow layout bugs */
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Fluid responsive typography using mathematical clamp limits */
+  --fs-h1: clamp(2rem, 6vw + 0.8rem, 3.25rem);
+  --fs-h2: clamp(1.6rem, 4vw + 0.8rem, 2.25rem);
+  --fs-body: clamp(0.95rem, 0.2vw + 0.9rem, 1.05rem);
+  --fs-lead: clamp(1.05rem, 0.4vw + 1rem, 1.2rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  line-height: 1.5;
+  overflow-x: hidden; /* Bulletproof boundary protection against hidden pixel breaks */
+}
+
+/* ==========================================================================
+   2. MEDIA FLEXIBILITY & COMPONENT TOKENS
+   ========================================================================== */
+.responsive-img {
+  max-width: 100%;
+  height: auto; /* Guarantees image tracking shapes never skew or warp awkwardly */
+  display: block;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary { background-color: #2563eb; color: #ffffff; }
+.btn-primary:hover { background-color: #1d4ed8; }
+.btn-secondary { background-color: #f1f5f9; color: #334155; }
+.btn-secondary:hover { background-color: #e2e8f0; }
+
+.badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   3. MOBILE MOBILE STYLES (Viewports up to 767px)
+   ========================================================================== */
+.app-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+
+.brand-logo { font-size: 1.35rem; font-weight: 800; }
+.logo-accent { color: #2563eb; }
+
+/* Hide Desktop action headers on mobile by default */
+.nav-actions-desktop { display: none; }
+.menu-checkbox { display: none; }
+
+/* Mobile Hamburger Menu icon design mapping */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-icon span {
+  width: 24px;
+  height: 3px;
+  background-color: #0f172a;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Mobile Flyout Drawer Menu setup */
+.nav-menu {
+  display: none; /* Keep hidden until menu toggle box clicks */
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  list-style: none;
+  gap: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.menu-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #334155;
+  display: block;
+}
+
+.nav-actions-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.nav-actions-mobile .btn-text {
+  text-align: center;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* CSS-Triggered Mobile Hamburger State Actions when checked */
+.menu-checkbox:checked ~ .nav-menu {
+  display: flex;
+}
+
+.menu-checkbox:checked ~ .hamburger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-checkbox:checked ~ .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+.menu-checkbox:checked ~ .hamburger-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Hero parameters */
+.hero-section {
+  padding: 6rem 1.25rem 3rem 1.25rem;
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero-content h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero-lead {
+  font-size: var(--fs-lead);
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hero-mockup {
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* Mobile Features elements */
+.features-section {
+  padding: 4rem 1.25rem;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  font-size: var(--fs-body);
+  color: #64748b;
+}
+
+.features-responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Forced 1 Column layout stack on tight viewports */
+  gap: 1.25rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bg-blue-tint { background-color: #e0f2fe; color: #0369a1; }
+.bg-green-tint { background-color: #dcfce7; color: #15803d; }
+.bg-purple-tint { background-color: #f3e8ff; color: #7e22ce; }
+.bg-orange-tint { background-color: #ffedd5; color: #c2410c; }
+
+.feature-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.feature-card p { font-size: var(--fs-body); color: #64748b; }
+
+.app-footer {
+  border-top: 1px solid #f1f5f9;
+  background-color: #fafafa;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   4. BREAKPOINT 1: TABLET LAYOUT VIEWPORTS (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .navbar-container { padding: 1.25rem 2.5rem; }
+  
+  .hero-section { padding: 8rem 2.5rem 4rem 2.5rem; }
+  
+  .hero-actions {
+    flex-direction: row; /* Buttons sit horizontally side-by-side on tablet layouts */
+  }
+  
+  .features-section { padding: 5rem 2.5rem; }
+
+  /* Grid automatically realigns into a beautiful 2-column layout grid balance */
+  .features-responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   5. BREAKPOINT 2: DESKTOP LAYOUT VIEWPORTS (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .navbar-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+  }
+
+  .hamburger-icon { display: none; } /* Vaporize mobile options completely */
+  
+  /* Reset menu list layout elements from vertical boxes back to standard desktop text links */
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    gap: 2.5rem;
+    border-bottom: none;
+  }
+  
+  .menu-link {
+    font-size: 0.95rem;
+    color: #475569;
+    transition: color 0.15s ease;
+  }
+  
+  .menu-link:hover { color: #2563eb; }
+  .nav-actions-mobile { display: none; }
+  .nav-actions-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .btn-text {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* Transform Hero into a clean horizontal alignment grid split map */
+  .hero-section { padding: 11rem 2rem 6rem 2rem; }
+  
+  .hero-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .hero-content, .hero-media { flex: 1; }
+  
+  /* Feature adjustments for large screen displays */
+  .features-section {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+  
+  .section-header { text-align: center; max-width: 700px; margin-bottom: 4.5rem; }
+
+  /* Realign Features layout elements into a symmetrical 4-Column inline strip */
+  .features-responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    padding: 2.25rem 1.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0,0,0,0.05);
+  }
+}
