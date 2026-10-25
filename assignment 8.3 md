@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8.3 — Magazine Layout Using Grid Areas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Grid Container -->
+    <div class="magazine-grid">
+        
+        <!-- Header Section -->
+        <header class="mag-header">
+            <h1>The Daily Chronicle</h1>
+            <p class="date-stamp">Sunday, October 25, 2026</p>
+        </header>
+
+        <!-- Navigation Section -->
+        <nav class="mag-nav">
+            <ul>
+                <li><a href="#" class="active">World</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Business</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Article Section -->
+        <main class="mag-main">
+            <article class="hero-story">
+                <span class="category-tag">Featured Story</span>
+                <h2>The Architecture of Modern Grid Systems</h2>
+                <p class="lead-text">
+                    How named template fields are changing the layout paradigms of digital editorial design platforms across the open web.
+                </p>
+                <div class="story-body">
+                    <p>For decades, digital layouts struggled to mirror the intricate structural flexibility of print media. Designers fought with floats, inline-blocks, and early flex hacks to align columns cleanly without breaking flow containers.</p>
+                    <p>With the widespread adoption of <code>grid-template-areas</code>, editorial design has experienced a modern renaissance. Developers can explicitly declare page maps directly inside parent selectors, defining visual hierarchies that adapt seamlessly to responsive changes.</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside class="mag-sidebar">
+            <div class="sidebar-block">
+                <h3>Trending News</h3>
+                <ul class="trending-list">
+                    <li>
+                        <span class="trend-num">01</span>
+                        <a href="#">Quantum computing layers pass network latency tests.</a>
+                    </li>
+                    <li>
+                        <span class="trend-num">02</span>
+                        <a href="#">Designing for accessibility: A checklist for engineering teams.</a>
+                    </li>
+                    <li>
+                        <span class="trend-num">03</span>
+                        <a href="#">CSS custom properties evolve to support dynamic structural state triggers.</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Footer Section -->
+        <footer class="mag-footer">
+            <p>&copy; 2026 The Daily Chronicle Editorial Team. Crafted using explicit CSS named grid areas.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   BASE EDITORIAL RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif; /* Classic editorial typography */
+    background-color: #fcfbf7; /* Warm soft newsprint color */
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ==========================================
+   GRID CONTAINER & AREA DECLARATIONS
+   ========================================== */
+.magazine-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+
+    /* Step 5: Allocates three columns. The main article spans 2 columns (1fr + 1fr),
+       giving it double the structural space of the 1fr sidebar. */
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    /* Step 3: Global template matrix map specifying spatial structural flow lines */
+    grid-template-areas: 
+        "head head head"
+        "navigation navigation navigation"
+        "main main side"
+        "foot foot foot";
+}
+
+/* ==========================================
+   ASSIGNING NAMED GRID AREAS (Step 4)
+   ========================================== */
+.mag-header {
+    grid-area: head;
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 4px double #1a1a1a;
+}
+
+.mag-nav {
+    grid-area: navigation;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px 0;
+}
+
+.mag-main {
+    grid-area: main;
+    background-color: #ffffff;
+    border: 1px solid #e8e6df;
+    padding: 30px;
+}
+
+.mag-sidebar {
+    grid-area: side;
+    background-color: #f7f5ee;
+    border-left: 1px solid #dcdad0;
+    padding: 24px;
+}
+
+.mag-footer {
+    grid-area: foot;
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #1a1a1a;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* ==========================================
+   INTERNAL COMPONENT STYLING
+   ========================================== */
+
+/* --- Header Elements --- */
+.mag-header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+.date-stamp {
+    font-family: system-ui, -apple-system, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #555555;
+}
+
+/* --- Navigation Links --- */
+.mag-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.mag-nav a {
+    font-family: system-ui, -apple-system, sans-serif;
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+.mag-nav a:hover, .mag-nav a.active {
+    color: #c2410c;
+}
+
+/* --- Main Story Layout --- */
+.category-tag {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #c2410c;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.hero-story h2 {
+    font-size: 2.25rem;
+    margin: 8px 0 16px 0;
+    line-height: 1.2;
+}
+.lead-text {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.story-body p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+/* --- Sidebar Content --- */
+.sidebar-block h3 {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+.trending-list {
+    list-style: none;
+}
+.trending-list li {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.trend-num {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c2410c;
+    line-height: 1;
+}
+.trending-list a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+.trending-list a:hover {
+    color: #c2410c;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM MEDIA QUERY
+   ========================================== */
+@media (max-width: 868px) {
+    /* Step 6: Transforms structural layouts dynamically into 
+       a single-column grid context for phone displays. */
+    .magazine-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "head"
+            "navigation"
+            "main"
+            "side"
+            "foot";
+    }
+    
+    .mag-sidebar {
+        border-left: none;
+        border-top: 1px solid #dcdad0;
+    }
+    
+    .mag-nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
