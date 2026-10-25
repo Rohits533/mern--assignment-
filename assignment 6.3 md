@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6.3 — Overflow & Layout Fixing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>CSS Overflow Lab & Layout Fixes</h1>
+        <p>Analyzing how different <code>overflow</code> properties contain or isolate overflowing text structures inside fixed-height boxes.</p>
+    </header>
+
+    <main class="grid-layout">
+
+        <!-- Case 1: Overflow Visible -->
+        <div class="card overflow-visible">
+            <h2>1. overflow: visible</h2>
+            <div class="badge">Default</div>
+            <p class="content">This container is constrained to a fixed height. Because overflow is configured to visible, any extra block data spills directly through the outer boundary wall without stretching the parent node container. It can textually collide with other design cards downstream if padding gaps are narrow.</p>
+        </div>
+
+        <!-- Case 2: Overflow Hidden -->
+        <div class="card overflow-hidden">
+            <h2>2. overflow: hidden</h2>
+            <div class="badge">Clipped</div>
+            <p class="content">This container blocks any trailing content that exceeds its fixed dimensions. The browser physically truncates the paragraphs right at the bottom edge. While it stops overlapping graphics, users cannot access or read the buried sentences below the cutoff line.</p>
+        </div>
+
+        <!-- Case 3: Overflow Scroll -->
+        <div class="card overflow-scroll">
+            <h2>3. overflow: scroll</h2>
+            <div class="badge">Permanent Bar</div>
+            <p class="content">This container forces vertical and horizontal scrollbar tracks onto the UI layout cards unconditionally, whether the element contains long sentences or short sentences. It guarantees an interface zone capable of shifting, but creates a visual tracking footprint even when empty.</p>
+        </div>
+
+        <!-- Case 4: Overflow Auto (Clean Fix) -->
+        <div class="card overflow-auto">
+            <h2>4. overflow: auto</h2>
+            <div class="badge bg-success">Optimal Choice</div>
+            <p class="content">This layout container applies a smart solution using <code>overflow: auto</code>. Scrollbars only manifest dynamically when the inside sentence volume threatens to break the container walls. If the volume decreases, the scrollbars cleanly disappear, keeping the design clean.</p>
+        </div>
+
+    </main>
+
+    <!-- Lab Section: Before & After Layout Fix Demonstration -->
+    <section class="fix-container">
+        <h2>5. Real-World Overflow Bug & Fix Scenario</h2>
+        <p class="instructions">Open your page or your DevTools window to inspect how modern applications prevent text clipping bugs or unscrollable elements.</p>
+        
+        <div class="fix-demo-box">
+            <h3>Fixed Panel Layout</h3>
+            <div class="scroll-fix-window">
+                <p><strong>Bug Context:</strong> The original parent framework relied on static layout limitations that clipped sentences across small viewport changes. </p>
+                <p><strong>Applied Fix:</strong> By initializing <code>overflow-y: auto</code> alongside modern relative sizing constraints, information architectures dynamically adjust across various screen sizes while maintaining absolute readable structural access.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   RESET & SYSTEM CONFIGURATION
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   CARD DISPLAY LAYOUT
+   ========================================== */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; /* High layout gap prevents overlap issues with 'visible' configuration */
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+/* Core Fixed Height Constraint Rule */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    height: 200px; /* FIXED HEIGHT CRITICAL ELEMENT */
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.bg-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.content {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* ==========================================
+   OVERFLOW CONFIGURATION VARIATIONS
+   ========================================== */
+
+/* 1. Visible — Content spills outwards unchecked */
+.overflow-visible {
+    overflow: visible;
+}
+
+/* 2. Hidden — Content is brutally cut off */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* 3. Scroll — Scroll bars are active at all times */
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* 4. Auto — Intelligent conditional scroll bar presentation */
+.overflow-auto {
+    overflow: auto;
+}
+
+/* ==========================================
+   LAYOUT FIX DEMONSTRATION PANEL
+   ========================================== */
+.fix-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.fix-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.fix-demo-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+
+.fix-demo-box h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+/* Resolved UI Layout Rule Box */
+.scroll-fix-window {
+    height: 120px;          /* Preserves structural footprint limits */
+    overflow-y: auto;       /* FIX: Resolves structural clip errors dynamically */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.scroll-fix-window p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
