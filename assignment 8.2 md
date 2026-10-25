@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8.2 — Auto-Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="gallery-header">
+        <h1>Auto-Responsive Visual Grid</h1>
+        <p>Built using CSS Grid <code>auto-fit</code> and <code>minmax()</code> properties for fluid, queryless responsiveness.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Step 3: Auto-Responsive Grid Container Shell -->
+        <div class="gallery-grid">
+            
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-1">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <circle cx="150" cy="100" r="40" fill="#ffffff" opacity="0.3"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 01</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-2">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <rect x="110" y="60" width="80" height="80" fill="#ffffff" opacity="0.3" rx="8"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 02</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-3">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <polygon points="150,50 200,140 100,140" fill="#ffffff" opacity="0.3"/>
+                    <text x="50%" y="60%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 03</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-4">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <circle cx="120" cy="100" r="30" fill="#ffffff" opacity="0.3"/>
+                    <circle cx="180" cy="100" r="30" fill="#ffffff" opacity="0.2"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 04</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-5">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <path d="M110 70 L190 70 L150 140 Z" fill="#ffffff" opacity="0.3"/>
+                    <text x="50%" y="50%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 05</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-6">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <rect x="110" y="60" width="80" height="80" transform="rotate(45 150 100)" fill="#ffffff" opacity="0.3"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 06</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-7">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <circle cx="150" cy="100" r="45" fill="#ffffff" opacity="0.15"/>
+                    <circle cx="150" cy="100" r="25" fill="#ffffff" opacity="0.25"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 07</text>
+                </svg>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item">
+                <svg viewBox="0 0 300 200" class="gallery-svg-asset tint-8">
+                    <rect width="100%" height="100%" fill="none"/>
+                    <rect x="100" y="80" width="100" height="40" fill="#ffffff" opacity="0.3" rx="4"/>
+                    <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-weight="bold">Asset 08</text>
+                </svg>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   CORE RESET & CONFIGURATION
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.gallery-header p {
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   STEP 3 & 5: CSS GRID AUTO-FIT CONTAINER
+   ========================================== */
+.gallery-grid {
+    display: grid;
+    
+    /* Auto-fit dynamically generates columns based on 250px minimum thresholds */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    /* Step 5: Consistent uniform spatial layout gap boundaries */
+    gap: 20px;
+}
+
+/* ==========================================
+   STEP 2 & 4: IMAGES / ITEM WRAPPERS STYLING
+   ========================================== */
+.gallery-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Step 4: Width and object-fit layout constraints for fluid mapping */
+.gallery-svg-asset {
+    display: block;
+    width: 100%;            /* Fills layout container space completely */
+    height: 200px;          /* Preserves uniform display row alignment height */
+    object-fit: cover;      /* Crops assets elegantly to adapt without distortion */
+}
+
+/* Reusable asset mockup background color templates */
+.tint-1 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.tint-2 { background: linear-gradient(135deg, #10b981, #047857); }
+.tint-3 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+.tint-4 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.tint-5 { background: linear-gradient(135deg, #ec4899, #be185d); }
+.tint-6 { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+.tint-7 { background: linear-gradient(135deg, #64748b, #334155); }
+.tint-8 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
