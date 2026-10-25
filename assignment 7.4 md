@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.4 — Modern Landing Page Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Header -->
+    <header class="landing-header">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="#">SaaS<span>Flow</span></a>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Product</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+
+            <!-- Call to Action Button -->
+            <div class="nav-cta">
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Start Free Trial</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Flexbox Side-by-Side Layout) -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Left Side: Hero Text Content -->
+            <div class="hero-text-content">
+                <h1 class="hero-heading">Optimize Your Team's Dev Pipeline</h1>
+                <p class="hero-paragraph">
+                    Deploy structural assets instantly, manage deep layout states, and synchronize cloud variables from an elegant command terminal interface built directly for modern software creators.
+                </p>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-large">Get Started Now</a>
+                    <a href="#" class="btn btn-outline btn-large">Watch Architecture Blueprint</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Hero Visual Illustration Placeholder -->
+            <div class="hero-visual-frame">
+                <svg class="hero-svg-illustration" viewBox="0 0 500 400" xmlns="http://w3.org">
+                    <!-- Base background grid card window -->
+                    <rect x="20" y="40" width="460" height="320" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+                    <!-- Mock terminal/window header bar -->
+                    <rect x="20" y="40" width="460" height="40" rx="12" fill="#f8fafc"/>
+                    <circle cx="50" cy="60" r="6" fill="#ef4444"/>
+                    <circle cx="70" cy="60" r="6" fill="#f59e0b"/>
+                    <circle cx="90" cy="60" r="6" fill="#10b981"/>
+                    
+                    <!-- Decorative abstract visual layout nodes inside window -->
+                    <rect x="50" y="110" width="260" height="24" rx="6" fill="#6366f1" opacity="0.8"/>
+                    <rect x="50" y="150" width="380" height="14" rx="4" fill="#94a3b8" opacity="0.4"/>
+                    <rect x="50" y="180" width="320" height="14" rx="4" fill="#94a3b8" opacity="0.4"/>
+                    
+                    <rect x="50" y="230" width="120" height="80" rx="8" fill="#3b82f6" opacity="0.15"/>
+                    <rect x="190" y="230" width="120" height="80" rx="8" fill="#10b981" opacity="0.15"/>
+                    <rect x="330" y="230" width="100" height="80" rx="8" fill="#6366f1" opacity="0.15"/>
+                </svg>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Component styled with sticky structural spacing elements -->
+    <footer class="landing-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 SaaSFlow Systems Inc. Engineered under Flexbox layout specifications.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   GLOBAL SYSTEM RESET & CORE DEFINITIONS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #fafafa;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVIGATION INTERFACE (position: sticky)
+   ========================================== */
+.landing-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    
+    /* Flexbox arrangement activation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo a span {
+    color: #6366f1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #6366f1;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==========================================
+   SIDE-BY-SIDE HERO LAYOUT (Flexbox Container)
+   ========================================== */
+.hero-section {
+    padding: 80px 24px;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(99, 102, 241, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* Side-by-side positioning framework via Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Vertically balances textual fields and graphical node frames */
+    gap: 48px;
+}
+
+/* --- Left Text Layout Footprint --- */
+.hero-text-content {
+    flex: 1; /* Instructs text layout blocks to expand proportionally */
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero-paragraph {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 32px;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* --- Right Graphical Frame Layout --- */
+.hero-visual-frame {
+    flex: 1; /* Instructs illustration wrapper to scale evenly alongside textual parameters */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-svg-illustration {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.04));
+}
+
+/* ==========================================
+   BUTTON INTERFACE DESIGN TOKENS
+   ========================================== */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #6366f1;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #4f46e5;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #475569;
+}
+
+.btn-secondary:hover {
+    color: #0f172a;
+}
+
+.btn-outline {
+    background-color: #ffffff;
+    color: #334155;
+    border: 1px solid #d1d5db;
+}
+
+.btn-outline:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.btn-large {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   CLEAN FOOTER INFRASTRUCTURE
+   ========================================== */
+.landing-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 30px 24px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================== */
+@media (max-width: 968px) {
+    /* Converts layout architecture into a vertical layout stack */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-paragraph {
+        margin: 0 auto 32px auto;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Collapses top header tracking rules onto phone layout views safely */
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+}
