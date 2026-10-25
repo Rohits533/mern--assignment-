@@ -1,0 +1,139 @@
+assingmnet 3.3 md_::
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        dt {
+            font-weight: bold;
+            color: #0056b3;
+            margin-top: 10px;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header>
+        <h1>Apex Institute of Technology</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <h2>About Our Institution</h2>
+        <p>Welcome to the <strong>Apex Institute of Technology</strong>, a premier center of higher learning dedicated to fostering innovation, academic excellence, and professional development. Established with a vision to cultivate the next generation of global leaders, our college offers industry-aligned undergraduate and postgraduate courses designed to equip students with both foundational theoretical knowledge and critical hands-on practical skills.</p>
+    </section>
+
+    <!-- Departments Section Using <ul> -->
+    <section id="departments">
+        <h2>Academic Departments</h2>
+        <p>We host diverse educational domains structured to push the boundaries of modern science and art:</p>
+        <ul>
+            <li>Department of Computer Science & Engineering</li>
+            <li>Department of Information Technology</li>
+            <li>Department of Mechanical Engineering</li>
+            <li>Department of Business Administration</li>
+            <li>Department of Basic Sciences & Humanities</li>
+        </ul>
+    </section>
+
+    <!-- Admission Process Section Using <ol> -->
+    <section id="admission-process">
+        <h2>Admission Process</h2>
+        <p>Follow these progressive steps to secure your enrollment at our institution:</p>
+        <ol>
+            <li><strong>Online Registration:</strong> Create an account on our official admissions portal.</li>
+            <li><strong>Application Form:</strong> Fill out personal, academic, and contact details accurately.</li>
+            <li><strong>Document Upload:</strong> Submit scanned copies of academic transcripts and identity proofs.</li>
+            <li><strong>Entrance Assessment:</strong> Appear for the mandatory institutional compatibility test.</li>
+            <li><strong>Counseling & Interview:</strong> Attend the final face-to-face interaction rounds.</li>
+            <li><strong>Fee Payment:</strong> Pay the registration and semester fees to secure your seat allocation.</li>
+        </ol>
+    </section>
+
+    <!-- Subjects & Topics Section Arranged in a Nested List -->
+    <section id="course-curriculum">
+        <h2>Course Syllabus (Web Development Elective)</h2>
+        <p>An overview of the nested structural layout of topics taught under our modern engineering curricula:</p>
+        <ul>
+            <li><strong>Unit 1: Fundamentals of Front-End Technologies</strong>
+                <ul>
+                    <li>HyperText Markup Language (HTML)
+                        <ul>
+                            <li>Structural Tags and Page Layout</li>
+                            <li>Semantic Lists (Ordered, Unordered, & Description)</li>
+                            <li>Forms and Input Validation Schema</li>
+                        </ul>
+                    </li>
+                    <li>Cascading Style Sheets (CSS)
+                        <ul>
+                            <li>Selectors and Box Model Mechanics</li>
+                            <li>Flexbox and Grid Layout Architectures</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Unit 2: Dynamic Web Architectures</strong>
+                <ul>
+                    <li>JavaScript Core Mechanics
+                        <ul>
+                            <li>Variables, Control Structures, and Operators</li>
+                            <li>DOM Manipulation and Event Handlers</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Faculty & Course Details Using <dl>, <dt>, and <dd> -->
+    <section id="faculty-details">
+        <h2>Faculty & Course Coordinator Profiles</h2>
+        <p>Get in touch with our specialized domain experts handling core tracks:</p>
+        <dl>
+            <dt>Dr. Jennifer Robbins</dt>
+            <dd><strong>Designation:</strong> Head of Department, Computer Science & Engineering</dd>
+            <dd><strong>Specialization:</strong> UI/UX Layouts, Advanced Human-Computer Interaction, and Interactive Web Graphics.</dd>
+            <dd><strong>Contact:</strong> j.robbins@apexinstitute.edu</dd>
+
+            <dt>Prof. Todd Meister</dt>
+            <dd><strong>Designation:</strong> Assistant Professor & Technical Lead</dd>
+            <dd><strong>Specialization:</strong> Full-Stack Architectures, Database Management Systems, and Cloud-Native Platforms.</dd>
+            <dd><strong>Contact:</strong> t.meister@apexinstitute.edu</dd>
+        </dl>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
