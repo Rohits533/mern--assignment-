@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 9.3 - Flexbox & Grid Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar (Uses Flexbox) -->
+  <header class="navbar-header">
+    <nav class="navbar">
+      <div class="logo">SaaS✕Grid</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="btn-nav">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2. Hero Section (Uses Flexbox for Alignment) -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Smart Layouts, Built Responsively.</h1>
+        <p>Combine the layout alignment power of CSS Flexbox with the multi-column coordination of CSS Grid to build bulletproof web interfaces.</p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn primary-btn">Explore Features</a>
+          <a href="#" class="btn secondary-btn">Watch Demo</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Placeholder image representing a graphic interface layout dashboard -->
+        <img src="https://picsum.photos" alt="Abstract interface illustration dashboard wireframe blueprint layout" class="responsive-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Features Section (Main Section Layout uses Grid) -->
+  <section id="features" class="features-section">
+    <div class="section-title">
+      <h2>Engineered for Modern Web Workflows</h2>
+      <p>Discover how layout systems synchronize beautifully across viewports</p>
+    </div>
+
+    <!-- Main Grid Container -->
+    <div class="features-grid">
+      
+      <!-- Card 1 (Internal layout uses Flexbox) -->
+      <article class="feature-card">
+        <div class="card-icon">⚡</div>
+        <div class="card-body">
+          <h3>Fluid Performance</h3>
+          <p>Hardware accelerated layouts optimized for smooth frame rates across old and new engines alike.</p>
+        </div>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </article>
+
+      <!-- Card 2 (Internal layout uses Flexbox) -->
+      <article class="feature-card">
+        <div class="card-icon">📐</div>
+        <div class="card-body">
+          <h3>Grid Coordination</h3>
+          <p>Two-dimensional tracking parameters lock elements symmetrically across columns and dynamic rows.</p>
+        </div>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </article>
+
+      <!-- Card 3 (Internal layout uses Flexbox) -->
+      <article class="feature-card">
+        <div class="card-icon">📱</div>
+        <div class="card-body">
+          <h3>Adaptive Flow</h3>
+          <p>Implicit grid adjustments transition layouts from tiny mobile screens up to multi-row desktop monitors.</p>
+        </div>
+        <a href="#" class="card-link">Learn more &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 SaaS✕Grid Platform. Assignment 9.3 Completed Responsively.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   1. RESET & GLOBAL BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+img.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Common Layout Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.secondary-btn {
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+/* ==========================================================================
+   2. MOBILE FIRST STYLES (Default / Single-Column Stack)
+   ========================================================================== */
+
+/* Navbar Layout (Uses Flexbox for row distribution) */
+.navbar-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.btn-nav {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Hero Section Layout (Uses Flexbox for stacking & padding alignment) */
+.hero-section {
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile viewports */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap; /* Wrap buttons gracefully if screen is extra tight */
+}
+
+/* Main Section Layout: Features (Uses CSS Grid) */
+.features-section {
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: #64748b;
+}
+
+/* Features Grid Container initialization */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Crucial: Forced single column layout on mobile screens */
+  gap: 1.5rem;
+}
+
+/* Card Styling: Internal layout configuration uses Flexbox */
+.feature-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  
+  /* Flex direction configuration handles internal vertical push metrics */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Pushes the link item neatly to the absolute bottom of the flex card space */
+.card-link {
+  margin-top: auto; 
+  padding-top: 1.5rem;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Footer Section */
+.main-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   3. DESKTOP BREAKPOINT (min-width: 992px)
+   Converts layout configurations to elegant horizontal grids and side rows
+   ========================================================================== */
+@media (min-width: 992px) {
+  
+  /* Expand individual padding frameworks on wider displays */
+  .hero-section {
+    padding: 6rem 2rem;
+  }
+  
+  /* Convert Hero into a clean two-column side-by-side row via Flexbox direction swap */
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hero-text, .hero-image {
+    flex: 1; /* Assign uniform width properties symmetrically */
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .features-section {
+    padding: 6rem 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 2.25rem;
+  }
+
+  /* Convert the Features layout structure into an explicit 3-Column setup */
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
