@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.2 — Pricing Cards & Centered Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SECTION 1: Aligned Pricing Cards Container -->
+    <header class="section-header">
+        <h1>Flexible Pricing Framework</h1>
+        <p>Using Flexbox horizontal row alignment and stretching configurations.</p>
+    </header>
+
+    <main class="pricing-wrapper">
+        
+        <!-- Card 1: Basic -->
+        <article class="price-card">
+            <h2 class="tier-name">Basic</h2>
+            <div class="cost">$9<span>/mo</span></div>
+            <ul class="features-list">
+                <li>1 Active Project Workspace</li>
+                <li>Community Access Forums</li>
+                <li>Standard Component Exports</li>
+            </ul>
+            <button class="btn btn-tier">Get Started</button>
+        </article>
+
+        <!-- Card 2: Pro -->
+        <article class="price-card card-highlight">
+            <h2 class="tier-name">Pro</h2>
+            <div class="cost">$29<span>/mo</span></div>
+            <ul class="features-list">
+                <li>10 Active Workspace Nodes</li>
+                <li>24/7 Priority Mail Queues</li>
+                <li>Advanced Vector Exports</li>
+                <li>Team Collaboration Tokens</li>
+            </ul>
+            <button class="btn btn-tier btn-highlight">Go Pro</button>
+        </article>
+
+        <!-- Card 3: Premium -->
+        <article class="price-card">
+            <h2 class="tier-name">Premium</h2>
+            <div class="cost">$79<span>/mo</span></div>
+            <ul class="features-list">
+                <li>Unlimited Workspace Nodes</li>
+                <li>Dedicated Technical Lead</li>
+                <li>Custom Pipeline Hooks</li>
+                <li>White-Label Deployments</li>
+            </ul>
+            <button class="btn btn-tier">Join Premium</button>
+        </article>
+
+    </main>
+
+    <!-- SECTION 2: Vertically & Horizontally Centered Login Viewport Wrapper -->
+    <section class="login-viewport-wrapper">
+        <div class="login-card">
+            <h2 class="login-title">Account Gateway</h2>
+            <p class="login-subtitle">Sign in using internal session tokens.</p>
+            
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Identity Email</label>
+                    <input type="email" id="email" required placeholder="user@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Access Secret</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-submit">Authorize Session</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   RESET & SYSTEM VARIABLE ARCHITECTURE
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.5;
+    padding: 60px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+}
+
+.section-header p {
+    color: #64748b;
+}
+
+/* ==========================================
+   FLEXBOX PRICING LAYOUT GRID (Row Control)
+   ========================================== */
+.pricing-wrapper {
+    /* Step 3: Activating Flexbox on the parent layout shell */
+    display: flex;
+    
+    /* Step 6: Controls direction workflow along horizontal axis line blocks */
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    /* Step 4: Horizontal and Vertical Element Alignment Handling */
+    justify-content: center;
+    align-items: stretch; /* Cards stretch down equally to copy height of tallest block */
+    
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+}
+
+/* Base Pricing Component Cards Layout */
+.price-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    
+    /* Child Internal Flex controls to cleanly separate card text elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-highlight {
+    border: 2px solid #6366f1;
+    transform: scale(1.03); /* Gives the hero tier prominence */
+}
+
+.tier-name {
+    font-size: 1.25rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.cost {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 15px 0;
+}
+
+.cost span {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Pushes the card buttons perfectly flush to the bottom */
+}
+
+.features-list li {
+    font-size: 0.95rem;
+    color: #475569;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f1f5f9;
+}
+
+/* ==========================================
+   FLEXBOX ABSOLUTE CENTER LOGIN WRAPPER
+   ========================================== */
+.login-viewport-wrapper {
+    /* Step 3: Activating Flexbox parent settings to layout form space */
+    display: flex;
+    
+    /* Step 5: Absolute Horizontal and Vertical Alignments */
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #e2e8f0;
+    border-radius: 16px;
+    min-height: 450px; /* Forces enough layout depth block workspace to see center operations */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.login-subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* Form Fields Control */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #6366f1;
+}
+
+/* ==========================================
+   BUTTON STYLE INFRASTRUCTURE
+   ========================================== */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover { opacity: 0.9; }
+.btn-tier { background-color: #475569; color: #ffffff; }
+.btn-highlight { background-color: #6366f1; color: #ffffff; }
+.btn-submit { background-color: #0f172a; color: #ffffff; margin-top: 10px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .price-card.card-highlight {
+        transform: none; /* Disables scale modifications on small phone layouts */
+    }
+}
