@@ -1,0 +1,45 @@
+
+/--ASSINGNMENT 1.3 MD__-:
+
+
+
+
+
+
+
+
+
+question 1] The terminal allows you to talk directly to your computer using text commands instead of clicking around.
+• On Windows: Press the Windows Key, type PowerShell or Terminal, and hit Enter.
+• On Mac: Press Cmd + Space to open Spotlight, type Terminal, and hit Enter.
+
+question 2] We use the mkdir (make directory) command to generate new folders instantly.
+1. In your open terminal, type the following command and hit Enter:bash
+mkdir web-development-practice
+
+2. Move your terminal's focus inside this new folder using the cd (change directory) command:bash
+cd web-development-practice
+
+question 3] Instead of creating them one by one, you can tell the terminal to make multiple folders all at once by separating their names with spaces.
+1. Run this command in your terminal:bash
+mkdir week-1 week-2 week-3
+
+question 4] To create empty files from the terminal, we use different commands depending on your operating system. We will target the paths directly.
+• If you are on a Mac or Linux terminal:bash
+touch week-1/index.html week-2/index.html week-3/index.html
+
+question 5] To satisfy the practice part of your assignment, run these quick trial commands to show your instructor you know how to manipulate files:
+1. Navigate into a folder: cd week-1 (moves you in). Then type cd .. to go back up to the main folder.
+2. Rename a folder: Let's pretend to rename week-3 to sandbox.
+	• Mac/Linux: mv week-3 sandbox
+	• Windows: Rename-Item week-3 sandbox
+3. Delete a folder: Let's delete that newly renamed sandbox folder. Because it has files inside it, we use a recursive flag to force it to delete completely.
+	• Mac/Linux: rm -rf sandbox
+	• Windows: Remove-Item -Recurse sandbox
+
+question 6] If you installed VS Code correctly with the "Add to PATH" option earlier, you can launch it instantly from the command line.
+1. Make sure your terminal is still inside the main web-development-practice directory.
+2. Type the shortcut command code followed by a . (the dot tells it to open the current folder):bash
+code .
+
+
