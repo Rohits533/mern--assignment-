@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8.5 — CSS Grid Mini-Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Explicit CSS Grid Wrapper -->
+    <div class="grid-project-shell">
+        
+        <!-- Header Component Block -->
+        <header class="project-header">
+            <div class="brand">Grid<span>Canvas</span></div>
+            <p class="tagline">An editorial media catalog leveraging explicit named grid templates.</p>
+        </header>
+
+        <!-- Main Content Grid Area Area -->
+        <main class="project-main-grid">
+            
+            <!-- Card 1: Highlight Element (Explicit placement area) -->
+            <article class="gallery-card card-featured">
+                <div class="card-visual tint-blue">
+                    <svg viewBox="0 0 100 60" class="card-svg"><circle cx="50" cy="30" r="18" fill="#ffffff" opacity="0.3"/></svg>
+                </div>
+                <div class="card-body">
+                    <span class="badge">Featured Asset</span>
+                    <h3>Architecting Layout Futures</h3>
+                    <p>This layout container showcases structural element prioritization. By utilizing explicit row and column template area definitions, the block spans across multiple layout tracking lanes cleanly.</p>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="gallery-card">
+                <div class="card-visual tint-purple">
+                    <svg viewBox="0 0 100 60" class="card-svg"><rect x="35" y="15" width="30" height="30" rx="6" fill="#ffffff" opacity="0.3"/></svg>
+                </div>
+                <div class="card-body">
+                    <h3>Fluid Resizing</h3>
+                    <p>Enforces text wrapping constraints safely to protect layout alignment architectures from data overflows.</p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="gallery-card">
+                <div class="card-visual tint-emerald">
+                    <svg viewBox="0 0 100 60" class="card-svg"><polygon points="50,12 80,48 20,48" fill="#ffffff" opacity="0.3"/></svg>
+                </div>
+                <div class="card-body">
+                    <h3>Minmax Clamping</h3>
+                    <p>Columns scale automatically down to predefined architectural boundaries without breaking viewport streams.</p>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="gallery-card">
+                <div class="card-visual tint-amber">
+                    <svg viewBox="0 0 100 60" class="card-svg"><circle cx="40" cy="30" r="12" fill="#ffffff" opacity="0.3"/><circle cx="60" cy="30" r="12" fill="#ffffff" opacity="0.2"/></svg>
+                </div>
+                <div class="card-body">
+                    <h3>Spatial Tracking</h3>
+                    <p>Maintains consistent visual spacing gaps globally using integrated template layout properties.</p>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="gallery-card">
+                <div class="card-visual tint-rose">
+                    <svg viewBox="0 0 100 60" class="card-svg"><rect x="38" y="18" width="24" height="24" transform="rotate(45 50 30)" fill="#ffffff" opacity="0.3"/></svg>
+                </div>
+                <div class="card-body">
+                    <h3>Overflow Shield</h3>
+                    <p>Prevents structural element damage by clipping bounding boxes cleanly using hidden overflow controls.</p>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="gallery-card">
+                <div class="card-visual tint-cyan">
+                    <svg viewBox="0 0 100 60" class="card-svg"><path d="M50 12 L78 30 L50 48 L22 30 Z" fill="#ffffff" opacity="0.3"/></svg>
+                </div>
+                <div class="card-body">
+                    <h3>Atomic Sizing</h3>
+                    <p>Maintains consistent baseline heights across grid blocks automatically to balance typographical layouts.</p>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Footer Component Block -->
+        <footer class="project-footer">
+            <p>&copy; 2026 GridCanvas Framework. Standardized architecture utilizing queryless grid mechanics.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   RESET & FOUNDATION CONSTANTS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.5;
+    padding: 30px 15px;
+}
+
+/* ==========================================
+   PRIMARY STRUCTURAL LAYOUT (CSS Grid Areas)
+   ========================================== */
+.grid-project-shell {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px; /* Consistent gap spacing metric */
+    
+    /* Layout definition using named template areas mapping */
+    grid-template-areas: 
+        "header-area"
+        "main-area"
+        "footer-area";
+}
+
+/* Assigning Area Toggles */
+.project-header { grid-area: header-area; }
+.project-main-grid { grid-area: main-area; }
+.project-footer { grid-area: footer-area; }
+
+/* ==========================================
+   HEADER & FOOTER COMPONENT THEMING
+   ========================================== */
+.project-header {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.brand {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+.brand span { color: #4f46e5; }
+
+.tagline {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.project-footer {
+    text-align: center;
+    padding: 24px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   MAIN RESPONSIVE GRID LAYOUT (Repeat, Minmax, fr)
+   ========================================== */
+.project-main-grid {
+    display: grid;
+    
+    /* Auto-fit column metrics matching layout specs */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 20px; /* Uniform card internal spacing */
+}
+
+/* ==========================================
+   CARD ARCHITECTURE & PLACEMENT DEMONSTRATION
+   ========================================== */
+.gallery-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden; /* Prevent overflow in images/graphics */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Explicit Grid Placement / Card Prioritization Rules */
+.card-featured {
+    /* Instructs featured block to span 2 grid lanes when layout width is sufficient */
+    grid-column: span 2;
+}
+
+.card-visual {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 140px;
+    object-fit: contain; /* Prevents visual distortion layout cracks */
+}
+
+/* Graphic Tint Configurations */
+.tint-blue { background: linear-gradient(135deg, #4f46e5, #3b82f6); }
+.tint-purple { background: linear-gradient(135deg, #7e22ce, #9333ea); }
+.tint-emerald { background: linear-gradient(135deg, #059669, #10b981); }
+.tint-amber { background: linear-gradient(135deg, #d97706, #f59e0b); }
+.tint-rose { background: linear-gradient(135deg, #e11d48, #f43f5e); }
+.tint-cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+
+.card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+/* Text Wrapping Protection */
+.card-body h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    font-weight: 700;
+    word-wrap: break-word; /* Prevents overflow in long text string layouts */
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE LAYOUT RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 768px) {
+    /* Safety constraint: ensures the priority featured block doesn't 
+       force horizontal overflow scrollbars on narrow screens */
+    .card-featured {
+        grid-column: span 1;
+    }
+}
