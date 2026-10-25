@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6.2 — Backgrounds, Borders & Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Tiered Pricing & Layout Showcase</h1>
+        <p>Exploring CSS background treatments, border geometry, and element display behaviors.</p>
+    </header>
+
+    <!-- Main Container showcasing width limits -->
+    <main class="showcase-container">
+        
+        <!-- Card 1: Basic -->
+        <section class="card card-basic">
+            <h2 class="card-title">Basic</h2>
+            <p class="card-desc">Perfect for absolute beginners. Get essential access to our lightweight dashboard tools.</p>
+            
+            <!-- Display: block example -->
+            <div class="display-demo-block">
+                <span>display: block</span> element takes the full available card width.
+            </div>
+            
+            <button class="btn btn-basic">Get Started</button>
+        </section>
+
+        <!-- Card 2: Standard -->
+        <section class="card card-standard">
+            <span class="badge-inline">POPULAR</span> <!-- Display: inline example -->
+            <h2 class="card-title">Standard</h2>
+            <p class="card-desc">Designed for growing teams. Unlocks standard integrations and priority email assistance queues.</p>
+            
+            <div class="display-demo-container">
+                <!-- Display: inline-block examples -->
+                <span class="badge-inline-block">Tool A</span>
+                <span class="badge-inline-block">Tool B</span>
+                <span class="badge-inline-block">Tool C</span>
+            </div>
+            
+            <button class="btn btn-standard">Choose Standard</button>
+        </section>
+
+        <!-- Card 3: Premium -->
+        <section class="card card-premium">
+            <h2 class="card-title">Premium</h2>
+            <p class="card-desc">For enterprise workloads. Complete tooling analytics, 24/7 technical hotlines, and dedicated managers.</p>
+            
+            <div class="display-demo-block">
+                Advanced structural controls included natively.
+            </div>
+            
+            <button class="btn btn-premium">Go Premium</button>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+/* ==========================================
+   BASE LAYOUT RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   CONTAINER DIMENSIONS (Width, Max-Width)
+   ========================================== */
+.showcase-container {
+    width: 100%;
+    max-width: 1200px; /* Constraints maximum width stretching */
+    margin: 0 auto;
+    
+    /* Using flex layout to visually align elements side by side */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* ==========================================
+   CORE CARD ARCHITECTURE
+   ========================================== */
+.card {
+    /* Precise Size Metrics */
+    width: 100%;
+    min-width: 280px;
+    max-width: 350px; /* Constrains card growth within grids */
+    height: 480px;    /* Explicit height constraint */
+    
+    padding: 30px;
+    position: relative;
+    
+    /* Visual layout inside each card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* ==========================================
+   INDIVIDUAL CARD THEMES (Backgrounds & Borders)
+   ========================================== */
+
+/* --- Card 1: Basic --- */
+.card-basic {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;       /* Subtle flat grey border */
+    border-radius: 8px;              /* Standard rounded corner */
+}
+
+/* --- Card 2: Standard --- */
+.card-standard {
+    background-color: #f0fdf4;       /* Minty white background tints */
+    border: 3px solid #22c55e;       /* Striking green border color */
+    border-radius: 16px;             /* Medium rounded corner curvature */
+}
+
+/* --- Card 3: Premium --- */
+.card-premium {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); /* Radiant background gradient */
+    border: 2px solid #6366f1;       /* Indigo electrical accent wall */
+    border-radius: 24px;             /* Pronounced radical corner rounding */
+    color: #ffffff;
+}
+.card-premium .card-desc {
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   DISPLAY PROPERTY DEMONSTRATIONS
+   ========================================== */
+
+/* 1. Display: block */
+.display-demo-block {
+    display: block;                  /* Forces element onto a completely new line */
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.card-premium .display-demo-block {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Display: inline */
+.badge-inline {
+    display: inline;                 /* Flows directly along with text, ignores top/bottom height rules */
+    background-color: #22c55e;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: auto;                     /* Width cannot be modified explicitly */
+}
+
+/* 3. Display: inline-block */
+.display-demo-container {
+    margin-bottom: 20px;
+}
+
+.badge-inline-block {
+    display: inline-block;           /* Sits side-by-side but allows custom width/height/padding definitions */
+    background-color: #e2e8f0;
+    color: #334155;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    margin-right: 6px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* ==========================================
+   BUTTON INTERFACE COMPONENTS
+   ========================================== */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-basic {
+    background-color: #475569;
+    color: #ffffff;
+}
+
+.btn-standard {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+
+.btn-premium {
+    background-color: #ffffff;
+    color: #1e1b4b;
+}
