@@ -1,0 +1,74 @@
+
+//assingnment 2.5 md--:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required page title -->
+    <title>Personal Introduction Webpage</title>
+</head>
+<body>
+
+    <!-- Main Heading -->
+    <h1>Alex Mercer</h1>
+    <p>Welcome to my personal introduction webpage.</p>
+    <hr>
+
+    <!-- About Me Section -->
+    <div>
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate student learning the foundations of software engineering and web design. I enjoy solving problems, writing clean code, and building simple web applications from scratch.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Science in Computer Science</strong></p>
+        <p>State University (Expected Graduation: 2028)</p>
+    </div>
+
+    <!-- Technical Skills Section -->
+    <div>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>HyperText Markup Language (HTML5)</li>
+            <li>Basic Cascading Style Sheets (CSS)</li>
+            <li>Git and Version Control</li>
+            <li>Logic Flow and Troubleshooting</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div>
+        <h2>Hobbies</h2>
+        <p>When I am away from my computer screen, I spend my time reading science fiction novels, playing strategy games like chess, and hiking outdoors.</p>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div>
+        <h2>Contact Information</h2>
+        <p>Email: alex.mercer@example.com</p>
+        <p>GitHub Profile: <a href="https://github.com">://github.com</a></p>
+    </div>
+
+</body>
+</html>
