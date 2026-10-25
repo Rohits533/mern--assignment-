@@ -1,0 +1,54 @@
+
+//assingmnet 3.2md__;:
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio - Images Section</title>
+</head>
+<body>
+
+    <h1>Welcome to My Portfolio</h1>
+    <hr>
+
+    <!-- Images Section -->
+    <div>
+        <h2>Gallery & Projects</h2>
+
+        <!-- Image 1: Profile Photo -->
+        <div>
+            <h3>Profile Photo</h3>
+            <img src="images/profile.jpg" alt="A professional headshot of a smiling web developer in an office setting" width="200" height="200">
+        </div>
+
+        <!-- Image 2: First Project Screenshot -->
+        <div>
+            <h3>E-commerce Project</h3>
+            <img src="images/project1.jpg" alt="A screenshot of a responsive e-commerce web application displaying product grid layouts" width="400" height="250">
+        </div>
+
+        <!-- Image 3: Second Project Screenshot -->
+        <div>
+            <h3>Weather Dashboard Application</h3>
+            <img src="images/project2.jpg" alt="A simple user interface demonstrating a 5-day weather forecast with blue weather icons" width="400" height="250">
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
