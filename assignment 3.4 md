@@ -1,0 +1,68 @@
+
+//--assingnment 3.4 md-:
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3.4 — Semantic HTML</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Website Title</h1>
+    </header>
+
+    <!-- Navigation links inside <nav> -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content container -->
+    <main>
+        
+        <!-- Categorized section -->
+        <section>
+            <h2>Main Section Heading</h2>
+            
+            <!-- Self-contained article -->
+            <article>
+                <h3>Article Title (Correct Heading Hierarchy)</h3>
+                <p>This is the text paragraph inside an independent article.</p>
+                
+                <!-- Image with meaningful alt text -->
+                <img src="placeholder.jpg" alt="A laptop open on a wooden desk showing a line graph.">
+            </article>
+
+        </section>
+        
+    </main>
+
+    <!-- Sidebar content outside the main flow -->
+    <aside>
+        <h3>Sidebar Information</h3>
+        <p>Related links or quick notes go here.</p>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Student Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
