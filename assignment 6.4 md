@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6.4 — Positioning Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <span class="logo">PositionLab</span>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Floating Action Button (FAB) -->
+    <button class="floating-btn" title="Get Help">?</button>
+
+    <!-- Content Sections to enable page scrolling -->
+    <header id="hero" class="scroll-section hero-bg">
+        <h1>Advanced Positioning Demo</h1>
+        <p>Scroll down to see the sticky navigation bar track your movement and interact with relative layouts.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Features Section with Absolute Badges inside Relative Cards -->
+        <section id="features" class="scroll-section">
+            <h2 class="section-title">Product Showcase</h2>
+            
+            <div class="grid">
+                
+                <!-- Card 1 (Relative Parent) -->
+                <div class="product-card">
+                    <!-- Absolute Positioned Badge -->
+                    <span class="absolute-badge badge-new">NEW</span>
+                    <h3>Core Engine</h3>
+                    <p>Features state-of-the-art positioning properties mapping to isolated document rendering pipelines seamlessly.</p>
+                </div>
+
+                <!-- Card 2 (Relative Parent) -->
+                <div class="product-card">
+                    <!-- Absolute Positioned Badge -->
+                    <span class="absolute-badge badge-hot">HOT</span>
+                    <h3>Data Sync</h3>
+                    <p>Maintains persistent real-time streaming operations locked behind asynchronous cryptographic keys natively.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pricing Section to provide additional scroll distance -->
+        <section id="pricing" class="scroll-section pricing-bg">
+            <h2 class="section-title">Deployment Sandbox</h2>
+            <p>This empty padding buffer ensures there is plenty of scrollable canvas workspace to verify that your fixed action buttons and sticky navigation wrappers stay operational as expected during scrolling.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   GLOBAL STRUCTURE
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   STICKY NAVIGATION (position: sticky)
+   ========================================== */
+.sticky-nav {
+    position: sticky;
+    top: 0;                     /* Locks container directly to screen top edge */
+    z-index: 1000;              /* Higher z-index value forces bar above scrolling elements */
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #3b82f6;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* ==========================================
+   FLOATING ACTION BUTTON (position: fixed)
+   ========================================== */
+.floating-btn {
+    position: fixed;
+    bottom: 30px;               /* Stays locked in position relative to viewport */
+    right: 30px;                /* Stays locked in position relative to viewport */
+    z-index: 999;               /* Layer sits high but stays under top navigation wrapper */
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   CARD STRUCTURE & BADGES (position: relative / absolute)
+   ========================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Relative Container Parent */
+.product-card {
+    position: relative;         /* Establishes positioning boundary rules for any absolute child elements */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px 25px 25px 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+/* Absolute Positioned Badges */
+.absolute-badge {
+    position: absolute;
+    top: 15px;                  /* Distances layout away from relative parent top edge */
+    right: 15px;                 /* Distances layout away from relative parent right edge */
+    
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.badge-new { background-color: #dcfce7; color: #166534; }
+.badge-hot { background-color: #fee2e2; color: #991b1b; }
+
+/* ==========================================
+   SCROLL BUFFER DISPLAY BLOCKS
+   ========================================== */
+.scroll-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-bg h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.pricing-bg {
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    padding: 60px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 200px;       /* Pushes layout down significantly to extend page scroll depth */
+}
+
+.pricing-bg p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #64748b;
+}
