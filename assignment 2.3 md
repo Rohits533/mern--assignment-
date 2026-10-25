@@ -1,0 +1,57 @@
+
+/assingment 2.3 md __;
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header-section" class="container">
+        <h1>John Doe</h1>
+        <p>Welcome to my personal portfolio website.</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" class="container">
+        <h2>About Me</h2>
+        <p>I am a web developer learning to build clean and functional websites.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education-section" class="container">
+        <h2>Education</h2>
+        <p class="info-text">Bachelor of Science in Computer Science - University of Learning</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills-section" class="container">
+        <h2>Skills</h2>
+        <!-- Custom data attribute tracking skill level -->
+        <p class="info-text" data-level="intermediate">HTML, CSS, and Basic JavaScript</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-section" class="container">
+        <h2>Contact</h2>
+        <p>Email: john.doe@example.com</p>
+    </div>
+
+</body>
+</html>
+
+
