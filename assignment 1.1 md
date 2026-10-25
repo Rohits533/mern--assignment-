@@ -1,0 +1,17 @@
+//--assignment 1.1 md__-:
+
+
+
+
+
+
+
+question 1] When you type a URL into your browser (the client), it sends an HTTP (Hypertext Transfer Protocol) or secured HTTPS request across the internet to find the destination server hosting the websiteIn this request-response cycle, the server processes the incoming request, pulls any required information or user data from a database, and sends back a response containing files like HTML, CSS, and JavaScript.
+question 2] HTTP stands for HyperText Transfer Protocol, and HTTPS stands for HyperText Transfer Protocol Secure. Both are foundational rules (protocols) used by web browsers and servers to communicate and transfer data—like web pages, images, and videos—across the internet.
+question 3] The request-response cycle is the fundamental communication pattern powering the modern web, serving as the foundation for how clients (like web browsers or mobile apps) and servers interac
+question 4] he key difference between a static website and a dynamic website is how they deliver and display content to users. A static website serves pre-built, fixed content that looks exactly the same to every visitor, whereas a dynamic website generates content in real time, changing what it displays based on user interaction, time, or locatio
+question 5] The Chrome DevTools Network panel is a diagnostic tool used to track, monitor, and debug real-time network traffic between a web browser and a server. When you open Chrome DevTools (by pressing F12 or Ctrl+Shift+I on Windows/Linux, or Cmd+Opt+I on Mac) and click on the Network tab, it begins logging all incoming and outgoing browser requests. Each row in the log represents a distinct asset or document being fetched—such as HTML, CSS stylesheets, JavaScript files, images, or API endpoints (Fetch/XHR). By clicking on an individual request, developers can inspect crucial troubleshooting details including HTTP status codes, request and response headers, sent payloads, and data transmission timing parameters.
+
+
+
+
