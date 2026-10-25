@@ -1,0 +1,272 @@
+assningnment 4.5----md:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club | Home</title>
+    <meta name="description" content="Welcome to the official campus Coding Club portal. Explore our core tech activities and student developer initiatives.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Coding Club</h1>
+        <p>Innovate, Code, and Collaborate</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="registration.html">Join the Club</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Welcome to the Coding Hub</h2>
+            <p>The Coding Club is a community of tech builders dedicated to learning software architectures, solving dynamic programmatic challenges, and developing impactful open-source tools together.</p>
+        </section>
+
+        <section>
+            <h2>Core Club Activities</h2>
+            <ul>
+                <li>Weekly Algorithmic Problem Solving Blocks</li>
+                <li>Full-Stack Development Bootcamps</li>
+                <li>Annual Campus Hackathons</li>
+                <li>Guest Lectures by Industry Software Architects</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Coding Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+2] <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club | About Us</title>
+    <meta name="description" content="Learn about the history, goals, leadership core team, and upcoming operational timelines of our campus coding club.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Coding Club</h1>
+        <p>About Our Mission</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html"><strong>About Us</strong></a></li>
+            <li><a href="registration.html">Join the Club</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Who We Are</h2>
+            <p>Founded in 2024, our community has grown to over 150 active core developers. We bridge the gap between abstract computer science theory and production-grade engineering design.</p>
+        </section>
+
+        <section>
+            <h2>Club Leadership</h2>
+            <ul>
+                <li><strong>President:</strong> Sarah Chen (Senior, CSE)</li>
+                <li><strong>Vice President:</strong> Kabir Singh (Junior, IT)</li>
+                <li><strong>Technical Lead:</strong> Alex Mercer (Sophomore, ECE)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Upcoming Events Schedule</h2>
+            <table border="1">
+                <caption>Club Event Calendar - Autumn Semester</caption>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event Title</th>
+                        <th>Location/Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 07, 2026</td>
+                        <td>Git & GitHub Essentials Mini-Camp</td>
+                        <td>Lab 3, Tech Block</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 21, 2026</td>
+                        <td>UI/UX Component Wireframing Layouts</td>
+                        <td>Seminar Hall B</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 05, 2026</td>
+                        <td>Winter Hackfest Sprint</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Coding Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+3]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club | Join Us</title>
+    <meta name="description" content="Fill out the member registration form to unlock entry access keys to our technical software workshops.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Coding Club</h1>
+        <p>Membership Registration Portal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="registration.html"><strong>Join the Club</strong></a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Become a Member</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="member-name">Full Name:</label>
+                    <input type="text" id="member-name" name="member_name" required>
+                </div>
+                <br>
+                <div>
+                    <label for="member-email">Campus Email:</label>
+                    <input type="email" id="member-email" name="member_email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="member-roll">Roll Number / Student ID:</label>
+                    <input type="text" id="member-roll" name="member_roll" required>
+                </div>
+                <br>
+                <div>
+                    <label for="primary-track">Primary Focus Track:</label>
+                    <select id="primary-track" name="primary_track" required>
+                        <option value="">-- Choose Track --</option>
+                        <option value="web">Web Application Systems</option>
+                        <option value="dsa">Algorithms & Data Structures</option>
+                        <option value="ai">Machine Learning Operations</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Coding Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+4]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club | Contact Us</title>
+    <meta name="description" content="Reach out to the student leadership team for organizational inquiries, partnerships, or room logistics support.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Coding Club</h1>
+        <p>Get in Touch With Us</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="registration.html">Join the Club</a></li>
+            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <p>Have questions about applications, workshop prerequisites, or collaboration projects? Contact us directly through the channels below:</p>
+            <ul>
+                <li><strong>General Inquiry Email:</strong> contact@campuscodingclub.org</li>
+                <li><strong>Faculty Advisor Email:</strong> advisor@techinstitute.edu</li>
+                <li><strong>Physical Headquarters Office:</strong> Innovation Cell Room 402, Academic Block III</li>
+                <li><strong>Operational Hours:</strong> Monday to Friday (4:00 PM – 6:00 PM IST)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Coding Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
