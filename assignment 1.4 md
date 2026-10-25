@@ -1,0 +1,62 @@
+
+/--ASSIGNMENT 1.4 MD__:-
+
+
+
+
+
+
+
+
+
+question 1] Git tracks all the changes you make to your files over time.
+1. Download Git from the official site: git-scm.com.
+2. Open the installer file and click Next through all the default options. You do not need to change anything.
+3. Once the installation is finished, open your terminal (PowerShell on Windows or Terminal on Mac) and type:bash
+git --version
+
+question 2] You need your terminal to look directly inside your project directory.
+1. Open VS Code and open your web-development-practice folder.
+2. Go to the top menu bar, click Terminal, and select New Terminal.
+3. A terminal window will open at the bottom of VS Code, already inside your project folder path.
+
+question 3] This command initializes a brand new, empty Git repository inside your project.
+1. Type the following command in your terminal and press Enter:bash
+git init
+
+question 4] Git needs to know who is saving the work so your name is attached to your changes.
+1. Set your name by running:bash
+git config --global user.name "Your Name"
+
+2. Set your email address by running:bash
+git config --global user.email "your.email@example.com"
+
+question 5] 1. In VS Code, open your index.html file (or create one if it is blank).
+2. Add a basic title to it, like <h1>My Git Practice Page</h1>.
+3. Check what Git sees by running:bash
+git status
+Use code with caution.
+Your index.html file will be red, meaning it is untracked.
+4. Stage the file to prepare it for saving:bash
+git add index.html
+Use code with caution.
+5. Save the snapshot with a meaningful message:bash
+git commit -m "Initial commit: Set up index.html structure"
+Use code with caution.
+
+Commit #2: Adding style
+
+1. Open your style.css file (or create one) and add a quick background color change:css
+body { background-color: #f4f4f4; }
+
+2. Save your changes in Git by staging and committing:bash
+git add style.css
+git commit -m "Add background color styling to CSS file"
+
+
+Commit #3: Adding functionality
+
+1. Open your script.js file (or create one) and write a small message for the browser console:javascript
+console.log("Git assignment completed!");
+
+
