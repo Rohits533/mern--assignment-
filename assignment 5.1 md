@@ -1,0 +1,191 @@
+assingment 5.1-----.md:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. The External Stylesheet (style.css)
+
+css
+/* ==========================================================================
+   Base Elements Setup
+   ========================================================================== */
+body {
+    background-color: #f8fafc; /* Subtle, clean light gray background */
+    color: #1e293b;            /* High-contrast charcoal slate text */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Typography Configurations
+   ========================================================================== */
+h1, h2, h3 {
+    color: #0f172a;            /* Darker tone for standout headers */
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* Base link behavior */
+a {
+    color: #2563eb;            /* Bright interactive blue */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #1d4ed8;            /* Darker blue emphasis on hover */
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Header & Navigation Styling (Readable and Attractive)
+   ========================================================================== */
+header {
+    background-color: #0f172a; /* Deep structural dark navy background */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+nav {
+    background-color: #1e293b; /* Accent dark slate block */
+    padding: 0 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #f1f5f9;            /* Light gray text for visibility */
+    display: block;
+    padding: 14px 20px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+nav a:hover {
+    background-color: #334155; /* Interactive hover block effect */
+    color: #38bdf8;            /* Bright sky blue highlighting color */
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Main Content Layout Structural Block
+   ========================================================================== */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   Footer Elements
+   ========================================================================== */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+2. The Integrated HTML File (index.html)
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.1 — Styled Webpage Demonstration</title>
+    <!-- 2. Linking the External Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Styled Header Area -->
+    <header>
+        <h1>Apex Digital Hub</h1>
+        <p>Exploring Web Layout Architectures and Presentation Systems</p>
+    </header>
+
+    <!-- Accessible Navigation Bar Layout -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Structural Main Flow Block -->
+    <main>
+        <section id="home">
+            <h2>Transforming Raw Layout Markup</h2>
+            <p>This layout serves as direct proof of concepts explored during external file compilation workflows. By pulling structural definitions completely separate from design declarations, your codebase remains flexible, lightning-fast to navigate, and exceptionally easy to maintain.</p>
+            <p>You can verify element adjustments and rule overrides directly in real-time by launching <strong>Chrome DevTools</strong> (Press F12 or Right-Click and choose <em>Inspect</em>) to check font scaling metrics or flex alignment properties.</p>
+        </section>
+
+        <section id="services">
+            <h2>Core Development Principles</h2>
+            <p>When applying external themes, always ensure your layout choices maintain accessible color contrast values. For more extensive rule documentation, you can explore the official <a href="https://mozilla.org" target="_blank">MDN Web Docs Architecture Archive</a> platform assets online.</p>
+        </section>
+    </main>
+
+    <!-- Deep Structural Base Footer Container -->
+    <footer>
+        <p>&copy; 2026 Apex Digital Hub. Managed via External Design Architecture Blueprints.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
