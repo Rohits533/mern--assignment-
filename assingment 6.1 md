@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6.1 — Box Model Inspection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Box Model Inspection Lab</h1>
+        <p>Analyze how padding, borders, margins, and the <code>box-sizing</code> property control element dimensions.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Box 1: Content-Box Demonstration -->
+        <div class="box box-content">
+            <h2>Box 1: Content Box</h2>
+            <p><strong>Behavior:</strong> Uses <code>box-sizing: content-box</code> (the browser default). Padding and borders are added <em>on top</em> of the 250px width. Total width = 250px + 40px padding + 10px border = 300px.</p>
+        </div>
+
+        <!-- Box 2: Border-Box Demonstration -->
+        <div class="box box-border">
+            <h2>Box 2: Border Box</h2>
+            <p><strong>Behavior:</strong> Uses <code>box-sizing: border-box</code>. Padding and borders are absorbed <em>inside</em> the 250px width. Total width remains exactly 250px. The space for content shrinks to accommodate them.</p>
+        </div>
+
+        <!-- Box 3: Spacing & Margin Shift -->
+        <div class="box box-margin">
+            <h2>Box 3: Extreme Spacing</h2>
+            <p><strong>Behavior:</strong> Implements aggressive margin tracking to push neighboring layouts away. Open your DevTools inspector to view how the orange outer layer generates physical space.</p>
+        </div>
+
+    </main>
+
+    <div class="guide-panel">
+        <h3>DevTools Homework Guide</h3>
+        <p>Right-click any box, choose <strong>Inspect</strong>, and scroll to the bottom of the <strong>Computed</strong> styles panel to view your active box model diagram. Take your screenshot there!</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+/* ==========================================
+   BASE LAYOUT CONFIGURATION
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   BOX STRUCTURAL EXPERIMENTS
+   ========================================== */
+.box {
+    width: 250px; /* Base static width applied to all blocks */
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.box h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.box p {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* --- Box 1: Content Box Rules --- */
+.box-content {
+    box-sizing: content-box; /* Browser default structural setting */
+    padding: 20px;
+    border: 5px solid #3b82f6; /* Blue border */
+    margin: 15px;
+}
+
+/* --- Box 2: Border Box Rules --- */
+.box-border {
+    box-sizing: border-box; /* Forces layout to absorb inside dimensions */
+    padding: 20px;
+    border: 5px solid #10b981; /* Green border */
+    margin: 15px;
+}
+
+/* --- Box 3: Spacing & Margin Shift Rules --- */
+.box-margin {
+    box-sizing: border-box;
+    padding: 35px;             /* Massive interior padding expansion */
+    border: 10px solid #f59e0b; /* Amber thick border */
+    margin: 45px;              /* Massive exterior push back footprint */
+}
+
+/* ==========================================
+   INSTRUCTIONAL ASSISTANCE PANEL
+   ========================================== */
+.guide-panel {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    background-color: #e0f2fe;
+    border-left: 4px solid #0284c7;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.guide-panel h3 {
+    color: #0369a1;
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
