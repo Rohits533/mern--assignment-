@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club — Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevClub</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#join">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Building the Future, One Line at a Time</h1>
+        <p>Welcome to the premier college community for developers, designers, and tech enthusiasts.</p>
+        <a href="#join" class="btn btn-primary">Get Started</a>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- Events Section (Table Showcase) -->
+        <section id="events" class="section">
+            <h2 class="section-title">Upcoming Club Schedules</h2>
+            <div class="table-responsive">
+                <table class="club-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hackathon 2026</td>
+                            <td>Nov 12, 2026</td>
+                            <td>Lab 3C</td>
+                            <td><span class="badge badge-open">Open</span></td>
+                        </tr>
+                        <tr>
+                            <td>UI/UX Workshop</td>
+                            <td>Nov 18, 2026</td>
+                            <td>Seminar Hall</td>
+                            <td><span class="badge badge-open">Open</span></td>
+                        </tr>
+                        <tr>
+                            <td>AI Tech Talk</td>
+                            <td>Dec 05, 2026</td>
+                            <td>Main Auditorium</td>
+                            <td><span class="badge badge-full">Full</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="join" class="section">
+            <div class="form-container">
+                <h2 class="section-title">Membership Application</h2>
+                <form class="club-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">College Email</label>
+                        <input type="email" id="email" required placeholder="johndoe@college.edu">
+                    </div>
+                    <div class="form-group">
+                        <label for="track">Preferred Track</label>
+                        <select id="track">
+                            <option>Web Development</option>
+                            <option>Mobile Apps</option>
+                            <option>Data Science & AI</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 College DevClub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+/* ==========================================
+   DESIGN VARIABLES
+   ========================================== */
+:root {
+    /* Color Palette */
+    --primary: #4f46e5;         /* Deep Indigo */
+    --primary-hover: #4338ca;
+    --secondary: #0ea5e9;       /* Light Cyan Accent */
+    --bg-main: #f8fafc;         /* Slate Background */
+    --bg-card: #ffffff;
+    --text-dark: #0f172a;       /* Dark Typography */
+    --text-muted: #475569;
+    --border: #e2e8f0;
+    
+    /* Layout Constants */
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* ==========================================
+   BASE & RESET STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVIGATION COMPONENT
+   ========================================== */
+.navbar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* ==========================================
+   HERO BANNER LAYOUT
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #c7d2fe;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* ==========================================
+   STRUCTURAL CONTAINERS & HEADINGS
+   ========================================== */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+/* ==========================================
+   BUTTON STRUCTURAL CLASSES
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* ==========================================
+   READABLE TABLES
+   ========================================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius);
+}
+
+.club-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    text-align: left;
+}
+
+.club-table th, 
+.club-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.club-table th {
+    background-color: #f1f5f9;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.club-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-open { background-color: #dcfce7; color: #166534; }
+.badge-full { background-color: #fee2e2; color: #991b1b; }
+
+/* ==========================================
+   READABLE FORMS
+   ========================================== */
+.form-container {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* ==========================================
+   FOOTER STYLING
+   ========================================== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+
+
+
+
+
+
+
+This layout relies on a modern, professional indigo brand theme built out via clean CSS variable mapping [cite: 25]. Structural readable text alignment uses standard system font definitions to scale natively while improving processing performance across screen layouts [cite: 25]. Table borders deploy background row hovers to maximize visual scannability, paired with isolated inputs bounded by focus glows to anchor interactive web form clarity [cite: 25].
