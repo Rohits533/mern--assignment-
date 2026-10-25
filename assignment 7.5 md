@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.5 — Flexbox Mini-Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Navigation Bar Component -->
+    <header class="navbar-wrapper">
+        <div class="inner-container nav-flex">
+            <div class="site-logo">
+                <a href="#">Flex<span>Forge</span></a>
+            </div>
+            <nav class="navigation-menu">
+                <ul class="menu-list">
+                    <li><a href="#hero" class="active">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#cta">Solutions</a></li>
+                </ul>
+            </nav>
+            <div class="nav-button-group">
+                <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section Component -->
+    <section id="hero" class="hero-wrapper">
+        <div class="inner-container hero-flex">
+            <div class="hero-content">
+                <h1 class="main-heading">Develop Smarter Layouts Instantly</h1>
+                <p class="body-paragraph text-muted">
+                    Engineered using responsive constraints, clean flow architectures, and semantic layout properties. Stop fighting text wrapping behaviors and design with precision framework nodes.
+                </p>
+                <div class="action-buttons">
+                    <a href="#cta" class="btn btn-primary">Deploy Platform</a>
+                    <a href="#features" class="btn btn-secondary">Explore Components</a>
+                </div>
+            </div>
+            <div class="hero-graphic">
+                <svg class="graphic-svg" viewBox="0 0 400 300" xmlns="http://w3.org">
+                    <rect width="400" height="300" rx="12" fill="#e2e8f0" opacity="0.3"/>
+                    <rect x="40" y="50" width="320" height="40" rx="6" fill="#4f46e5" opacity="0.8"/>
+                    <rect x="40" y="110" width="140" height="140" rx="8" fill="#0ea5e9" opacity="0.7"/>
+                    <rect x="200" y="110" width="160" height="65" rx="8" fill="#10b981" opacity="0.7"/>
+                    <rect x="200" y="185" width="160" height="65" rx="8" fill="#f59e0b" opacity="0.7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 3-Feature Cards Section -->
+    <section id="features" class="features-wrapper">
+        <div class="inner-container">
+            <div class="section-center-header">
+                <h2 class="section-title">Core Performance Elements</h2>
+                <p class="body-paragraph text-muted">A look at how unified styling structure minimizes layout breakage metrics.</p>
+            </div>
+            
+            <div class="cards-flex-row">
+                <!-- Feature Card 1 -->
+                <article class="feature-card">
+                    <div class="card-icon-frame c-blue">✦</div>
+                    <h3 class="card-title">Fluid Geometry</h3>
+                    <p class="card-desc text-muted">Adapts fluidly across display bounds using responsive sizing and structural alignment hooks.</p>
+                </article>
+
+                <!-- Feature Card 2 -->
+                <article class="feature-card">
+                    <div class="card-icon-frame c-green">▲</div>
+                    <h3 class="card-title">Isolated Contexts</h3>
+                    <p class="card-desc text-muted">Keeps nested block elements aligned cleanly without parent overflow failures.</p>
+                </article>
+
+                <!-- Feature Card 3 -->
+                <article class="feature-card">
+                    <div class="card-icon-frame c-purple">◼</div>
+                    <h3 class="card-title">Atomic Tokens</h3>
+                    <p class="card-desc text-muted">Built entirely using a consistent design system of typography sizes and space patterns.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Call-To-Action (CTA) Section -->
+    <section id="cta" class="cta-wrapper">
+        <div class="inner-container cta-flex">
+            <div class="cta-text">
+                <h2 class="section-title text-white">Ready to standardise your workflow?</h2>
+                <p class="body-paragraph text-indigo-light">Initialize a production repository space right now. No credit card records required.</p>
+            </div>
+            <div class="cta-action">
+                <a href="#" class="btn btn-white">Create Workspace Instance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer Component -->
+    <footer class="footer-wrapper">
+        <div class="inner-container footer-flex">
+            <p class="footer-copy">&copy; 2026 FlexForge Systems. Designed using standardized modern layouts.</p>
+            <ul class="footer-links">
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Project Repository</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+/* ==========================================
+   GLOBAL DESIGN VARIABLES & SYSTEM TOKENS
+   ========================================== */
+:root {
+    /* Color Palette */
+    --clr-primary: #4f46e5;
+    --clr-primary-hover: #4338ca;
+    --clr-secondary: #0ea5e9;
+    --clr-dark: #0f172a;
+    --clr-light-bg: #f8fafc;
+    --clr-border: #e2e8f0;
+    
+    /* Global Spacing Standards */
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+    --space-xl: 64px;
+}
+
+/* ==========================================
+   CORE RESET & LAYOUT CLEANUP
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+.inner-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    width: 100%;
+}
+
+/* Reusable UI Elements */
+.body-paragraph {
+    font-size: 1.05rem;
+    max-width: 600px;
+}
+
+.text-muted { color: #64748b; }
+.text-white { color: #ffffff; }
+.text-indigo-light { color: #c7d2fe; }
+
+/* ==========================================
+   SECTION 1: NAVIGATION BAR (Flexbox Layout)
+   ========================================== */
+.navbar-wrapper {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--clr-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+}
+
+.site-logo a {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
+.site-logo a span { color: var(--clr-primary); }
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: var(--space-lg);
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.menu-list a:hover,
+.menu-list a.active {
+    color: var(--clr-primary);
+}
+
+/* ==========================================
+   SECTION 2: HERO SECTION (Flexbox Side-by-Side)
+   ========================================== */
+.hero-wrapper {
+    padding: var(--space-xl) 0;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(79, 70, 229, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+    letter-spacing: -1px;
+}
+
+.hero-content .body-paragraph {
+    margin-bottom: var(--space-lg);
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.hero-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.graphic-svg {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+}
+
+/* ==========================================
+   SECTION 3: FEATURE CARDS ROW (Responsive Row)
+   ========================================== */
+.features-wrapper {
+    padding: var(--space-xl) 0;
+    background-color: var(--clr-light-bg);
+}
+
+.section-center-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.cards-flex-row {
+    display: flex;
+    flex-wrap: wrap; /* Triggers row wrapping down nicely on smaller screens */
+    gap: var(--space-lg);
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    flex: 1 1 300px; /* Fluid flex scaling baseline rules metrics */
+    max-width: 360px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.card-icon-frame {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--space-md);
+}
+
+.c-blue { background-color: #eff6ff; color: #3b82f6; }
+.c-green { background-color: #f0fdf4; color: #10b981; }
+.c-purple { background-color: #faf5ff; color: #8b5cf6; }
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.card-desc { font-size: 0.95rem; }
+
+/* ==========================================
+   SECTION 4: CALL TO ACTION (CTA)
+   ========================================== */
+.cta-wrapper {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+}
+
+.cta-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+/* ==========================================
+   SECTION 5: FOOTER (Flexbox Layout)
+   ========================================== */
+.footer-wrapper {
+    background-color: #ffffff;
+    border-top: 1px solid var(--clr-border);
+    padding: var(--space-lg) 0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover { text-decoration: underline; }
+
+/* ==========================================
+   REUSABLE INTERFACE BUTTON COMPLEX
+   ========================================== */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.btn-primary { background-color: var(--clr-primary); color: #ffffff; }
+.btn-primary:hover { background-color: var(--clr-primary-hover); }
+.btn-secondary { background-color: #f1f5f9; color: #334155; }
+.btn-secondary:hover { background-color: #e2e8f0; }
+.btn-white { background-color: #ffffff; color: var(--clr-dark); }
+.btn-white:hover { background-color: #f8fafc; }
+.btn-sm { padding: 8px 16px; font-size: 0.875rem; }
+
+/* ==========================================
+   RESPONSIVE LAYOUT SYSTEM MEDIA QUERIES
+   ========================================== */
+@media (max-width: 968px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content .body-paragraph { margin: 0 auto var(--space-lg) auto; }
+    .action-buttons { justify-content: center; }
+    .main-heading { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-flex, .cta-flex, .footer-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+    
+    .menu-list { gap: var(--space-md); }
+    .feature-card { max-width: 100%; } /* Cards scale to pull width limits on small screens */
+}
