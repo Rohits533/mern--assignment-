@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.1 — Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Flexbox Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="#">Flex<span>Nav</span></a>
+            </div>
+            
+            <!-- Navigation Links Wrapper -->
+            <nav class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </nav>
+
+            <!-- Call to Action Button -->
+            <div class="nav-actions">
+                <a href="#" class="btn btn-nav">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <h1>Flexbox Alignment Sandbox</h1>
+            <p>Resize your browser window or switch to device emulation view in Chrome DevTools to inspect how the navigation layout structure adapts dynamically across desktop, tablet, and mobile breakpoints.</p>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+/* ==========================================
+   GLOBAL RESET & VARIANT TOKENS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   FLEXBOX NAVIGATION STRUCTURAL METRICS
+   ========================================== */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    
+    /* Flexbox Controls Activation */
+    display: flex;
+    
+    /* Step 3: Spacing between primary items (Logo, Links, CTA Button) */
+    justify-content: space-between;
+    
+    /* Step 4: Align items perfectly along the cross-axis vertical center */
+    align-items: center;
+}
+
+/* --- Brand Logo Styling --- */
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo a span {
+    color: #2563eb; /* Accent blue tint */
+}
+
+/* --- Nav Links Flex Arrangement --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px; /* Uniform horizontal gap spacing between link items */
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+/* ==========================================
+   INTERACTIVE ACTION BUTTONS
+   ========================================== */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-nav {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-nav:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM MEDIA QUERY
+   ========================================== */
+@media (max-width: 768px) {
+    /* Transforms header to a vertical column stack layout on mobile devices */
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* ==========================================
+   CONTENT HERO PLACEHOLDER BUFFER
+   ========================================== */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.hero {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 60px 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
