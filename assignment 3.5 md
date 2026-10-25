@@ -1,0 +1,99 @@
+//--assingnment 3.5 md-:
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio & Blog</title>
+</head>
+<body>
+
+    <!-- Header with Name/Logo -->
+    <header>
+        <h1>Alex Mercer | Portfolio & Blog</h1>
+    </header>
+
+    <!-- Navigation Bar with Working Jump Links -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills & Interests</a></li>
+            <li><a href="#projects">Projects & Blog</a></li>
+            <li><a href="#links">Useful Links</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <!-- Image asset with descriptive alternative text -->
+            <img src="profile.jpg" alt="A professional headshot portrait of Alex Mercer smiling.">
+            <p>Hello! I am a passionate student explorer transitioning into front-end design systems. I love crafting clean user interfaces and writing about modern semantic accessibility practices.</p>
+        </section>
+
+        <!-- Skills or Interests Section -->
+        <section id="skills">
+            <h2>Skills & Interests</h2>
+            <p>Areas of study and tech tools I frequently practice with:</p>
+            <ul>
+                <li>Semantic HTML5 Layout Architectures</li>
+                <li>Responsive Layout Design (CSS Flexbox)</li>
+                <li>Technical Writing & Content Creation</li>
+                <li>Digital Photography and Media Editing</li>
+            </ul>
+        </section>
+
+        <!-- Blog Posts or Projects Section -->
+        <section id="projects">
+            <h2>Blog Posts & Projects</h2>
+            
+            <!-- Project / Post 1 -->
+            <article>
+                <h3>Project: Personal Portfolio Template</h3>
+                <p>Designed a fully accessible web structure using proper tag landmarks to optimize screen-reader experiences.</p>
+            </article>
+
+            <!-- Project / Post 2 -->
+            <article>
+                <h3>Blog: Understanding Semantic HTML</h3>
+                <p>A quick breakdown article explaining why developers should drop division tags in favor of meaningful block names.</p>
+            </article>
+        </section>
+
+        <!-- Useful Links Section -->
+        <section id="links">
+            <h2>Useful Links</h2>
+            <p>Connect with my external spaces online:</p>
+            <ul>
+                <li><a href="https://github.com" target="_blank">My GitHub Profile</a></li>
+                <li><a href="https://linkedin.com" target="_blank">Connect on LinkedIn</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer with Contact Details -->
+    <footer id="contact">
+        <h2>Contact Details</h2>
+        <p>Email: alex.mercer@example.com | Phone: +1 (555) 019-2834</p>
+        <p>&copy; 2026 Alex Mercer. Built with Clean Semantic Code.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
