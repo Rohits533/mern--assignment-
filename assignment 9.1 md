@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- CRITICAL: Viewport meta tag for mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 9.1 - Mobile-First Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Project Gallery & Dashboard</h1>
+    <p>Responsive & Mobile-First Layout</p>
+  </header>
+
+  <main class="dashboard-container">
+    <!-- Card 1 -->
+    <article class="card">
+      <div class="card-image bg-blue"></div>
+      <div class="card-content">
+        <h3>Analytics Overview</h3>
+        <p>Monitor real-time site engagement, user retention metrics, and content interactions seamlessly.</p>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <div class="card-image bg-green"></div>
+      <div class="card-content">
+        <h3>Media Library</h3>
+        <p>Upload, organize, and filter high-resolution project image assets within optimized grid views.</p>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <div class="card-image bg-purple"></div>
+      <div class="card-content">
+        <h3>Performance Status</h3>
+        <p>Check processing workloads, active server load balance statistics, and database operations.</p>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card">
+      <div class="card-image bg-orange"></div>
+      <div class="card-content">
+        <h3>Account Settings</h3>
+        <p>Manage user profile configurations, interface display themes, and secure credential keys.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 Web Development Dashboard Assignment</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+/* ==========================================================================
+   1. RESET & BASE GLOBAL STYLES
+   Prevents unexpected margins and fixes box model calculation issues.
+   ========================================================================== */
+* {
+  box-sizing: border-box; /* Crucial for eliminating horizontal overflow */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Header & Footer Layouts */
+.main-header {
+  background-color: #1e293b;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.main-footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   2. MOBILE FIRST STYLES (Default / Viewports up to 767px)
+   Layout is a single vertical column. Content is stacked cleanly.
+   ========================================================================== */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout on phone screens */
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 100%; /* Prevents horizontal scroll breaking constraints */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  height: 160px;
+  width: 100%;
+}
+
+/* Fallback colors representing dynamic gallery items */
+.bg-blue { background-color: #3b82f6; }
+.bg-green { background-color: #10b981; }
+.bg-purple { background-color: #8b5cf6; }
+.bg-orange { background-color: #f97316; }
+
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   3. BREAKPOINT 1: TABLET LAYOUT (min-width: 768px)
+   Changes the dashboard grid into a 2-column format.
+   ========================================================================== */
+@media (min-width: 768px) {
+  .main-header {
+    padding: 3rem 2rem;
+  }
+
+  .dashboard-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium viewports */
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+/* ==========================================================================
+   4. BREAKPOINT 2: DESKTOP LAYOUT (min-width: 1024px)
+   Changes the grid into a 4-column row and clamps layout max-width.
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 items row setup on desktop */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole container block horizontally */
+    padding: 3rem 1rem;
+  }
+  
+  .card {
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px); /* Clean aesthetic desktop effect */
+  }
+}
