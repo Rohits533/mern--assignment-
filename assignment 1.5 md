@@ -1,0 +1,63 @@
+/assingment 1.5 --md__-:
+
+
+
+
+
+
+
+
+
+
+Ans 1: Create a GitHub account or use an existing one
+
+GitHub is a cloud platform where developers store and share their Git repositories.
+1. Open your browser and go to github.com.
+2. Click Sign up in the top right corner and follow the prompts to create an account, or log in if you already have one.
+
+
+
+Ans 2: Create a new public repository
+
+A remote repository acts as a cloud folder for your project code.
+1. Once logged in, click the "+" icon in the top right corner of the page and select New repository.
+2. Set the configuration details:
+	• Repository name: web-development-practice
+	• Description: Optional (e.g., "My web dev course assignments")
+	• Visibility: Set this strictly to Public (so your instructor can view and grade it).
+3. Do NOT check any boxes for "Add a README file", ".gitignore", or "Choose a license"—keep it completely empty.
+4. Click the green Create repository button.
+
+
+
+Ans 3 & 4: Connect the local repository to the remote repository and upload files
+
+GitHub will load a page showing a set of commands under the heading "…or push an existing repository from the command line".
+1. Open the terminal panel at the bottom of your VS Code project window.
+2. Link your local project folder to your new GitHub cloud folder by running this command (replace the URL with your actual GitHub repository URL):bash
+git remote add origin https://github.com
+
+3. Rename your default local branch to main so it matches GitHub's standard naming convention:bash
+git branch -M main
+
+4. Upload your files to the cloud using the push command:bash
+git push -u origin main
+
+
+Ans 5: Add a new file and push the second commit
+
+Now you will practice making a fresh update locally and syncing it with the cloud version.
+1. In VS Code, create a new file named README.md inside your main folder directory.
+2. Open the file and type a quick summary, like: # Web Development Practice Workspace. Save the file.
+3. Open your terminal and run the staging, saving, and uploading commands sequentially:bash
+git add README.md
+git commit -m "Add project description inside README.md file"
+git push
+
+
+Ans 6: Verify the commit history on GitHub
+
+1. Refresh your browser tab showing your repository page on GitHub.
+2. You will now see all of your files successfully uploaded.
+3. Click on the text that displays a clock icon along with "4 commits" (or 2+ depending on your previous project state).
+4. Check that your chronological list of commit messages is perfectly visible on the cloud screen.
