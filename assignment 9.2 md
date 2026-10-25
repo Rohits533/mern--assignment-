@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 9.2 - Responsive Typography & Images</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main layout container to prevent large-screen line blowout -->
+  <article class="content-container">
+    
+    <header class="article-header">
+      <span class="category-tag">Design & Architecture</span>
+      <h1>Building the Future: Minimalism in Modern Web Layouts</h1>
+      <p class="article-meta">Published October 2026 &bull; 5 min read</p>
+    </header>
+
+    <!-- Context Image Element -->
+    <figure class="article-image-wrapper">
+      <img src="https://picsum.photos" alt="Minimalist concrete architecture with clean sharp shadows" class="responsive-img">
+      <figcaption>Figure 1: Emphasizing negative space and clear visual hierarchies.</figcaption>
+    </figure>
+
+    <!-- Structural Text Content -->
+    <section class="article-body">
+      <p class="lead-text">
+        Good design is hidden in plain sight. As digital interfaces continue to scale across an infinitely diverse landscape of screen sizes, mastering typography fluidity and media adaptability becomes imperative.
+      </p>
+
+      <h2>The Principle of Scale</h2>
+      <p>
+        For generations, layouts relied heavily on fixed pixel architectures. Designers crafted distinct structures for desktop canvases, often completely disregarding how those choices degraded on small viewports. Modern engineering shifts this baseline entirely by moving toward scalable mathematical systems.
+      </p>
+
+      <p>
+        By leveraging dynamic functions, typography naturally scales relative to the viewport container dimensions. This ensures that text scales down effortlessly on mobile devices while remaining robust and well-proportioned on wide desktop monitors.
+      </p>
+
+      <h2>Visual Balance and Structural Integrity</h2>
+      <p>
+        Images often introduce layout breakage across responsive environments. When explicit asset dimension properties are declared stubbornly, screens experience horizontal overflow issues. Overwriting constraints globally resolves stretching artifacts entirely.
+      </p>
+    </section>
+
+  </article>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   1. GLOBAL RESET & CORE PROPERTIES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Dynamic fluid typography engine using clamp() */
+  /* Formula: clamp(minimum_size, preferred_dynamic_size, maximum_size) */
+  --fs-h1: clamp(2rem, 5vw + 1rem, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+  --fs-body: clamp(1rem, 0.5vw + 0.9rem, 1.2rem);
+  --fs-lead: clamp(1.15rem, 0.8vw + 1rem, 1.45rem);
+  
+  /* Layout constraints */
+  --line-height-body: 1.65;
+  --line-height-heading: 1.2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Georgia", serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  padding: 1.5rem 1rem;
+}
+
+/* ==========================================================================
+   2. CONTENT CONTAINER (Prevents text lines from getting too long on wide monitors)
+   ========================================================================== */
+.content-container {
+  width: 100%;
+  /* 700px creates the ideal line length (approx 60-75 characters per line) */
+  max-width: 720px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE IMAGES (Prevents stretching / enforces media boundaries)
+   ========================================================================== */
+.article-image-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.responsive-img {
+  /* Crucial properties to keep assets contained and proportional */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* ==========================================================================
+   4. FLUID & RESPONSIVE TYPOGRAPHY
+   ========================================================================== */
+.category-tag {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0066cc;
+  font-weight: 700;
+}
+
+.article-header h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--line-height-heading);
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.article-meta {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.article-body p {
+  font-size: var(--fs-body);
+  line-height: var(--line-height-body);
+  margin-bottom: 1.5rem; /* Improves breathing room/spacing */
+}
+
+/* Accentuate the initial entry point paragraph */
+.article-body .lead-text {
+  font-size: var(--fs-lead);
+  color: #333;
+  line-height: 1.5;
+}
+
+.article-body h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--line-height-heading);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* ==========================================================================
+   5. MEDIUM TO LARGE SCREEN SPACING ADJUSTMENTS
+   ========================================================================== */
+@media (min-width: 768px) {
+  body {
+    padding: 4rem 2rem;
+  }
+  
+  .article-image-wrapper {
+    /* Expand image slightly past text boundaries on larger viewports if desired */
+    width: 108%;
+    margin-left: -4%;
+  }
+}
